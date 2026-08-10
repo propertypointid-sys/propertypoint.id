@@ -394,19 +394,19 @@ function buildPropertyOptions(action) {
             "assets/icons/invest-opportunity.png",
 
         "Show Me What's New":
-            "assets/icons/show-me.png",
+            "assets/icons/optimized/show-me.png",
 
         "I'm Looking to Buy":
-            "assets/icons/looking-buy.png",
+            "assets/icons/optimized/looking-buy.png",
 
         "I'm Looking to Sell":
             "assets/icons/looking-sell.png",
 
         "I'm Looking to Invest":
-            "assets/icons/to-invest.png",
+            "assets/icons/optimized/to-invest.png",
 
         "I'm Exploring":
-            "assets/icons/exploring.png"
+            "assets/icons/optimized/exploring.png"
 
     };
 
