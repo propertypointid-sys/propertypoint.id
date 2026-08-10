@@ -675,44 +675,142 @@ Thank you.`;
 
 
     /* =====================================================
-       STEP 2
-       PROPERTY SELECTION
-    ===================================================== */
+   STEP 2
+   PROPERTY / INTENT SELECTION
+===================================================== */
 
-    if (propertyOptions) {
+if (propertyOptions) {
 
-        propertyOptions.addEventListener(
-            "click",
-            function (event) {
+    propertyOptions.addEventListener(
+        "click",
+        function (event) {
 
-                const propertyButton =
-                    event.target.closest(
-                        ".option[data-property]"
-                    );
+            const propertyButton =
+                event.target.closest(
+                    ".option[data-property]"
+                );
 
 
-                if (!propertyButton) {
+            if (!propertyButton) {
+                return;
+            }
+
+
+            event.preventDefault();
+
+
+            const selectedOption =
+                propertyButton.dataset.property;
+
+
+            /*
+               SPECIAL FLOW FOR "I'M NOT SURE"
+               --------------------------------
+               Step 2 choices are actually intents.
+            */
+
+            if (selection.action === "UNSURE") {
+
+                const unsureActions = {
+
+                    "I'm Looking to Buy":
+                        "BUY",
+
+                    "I'm Looking to Sell":
+                        "SELL",
+
+                    "I'm Looking to Invest":
+                        "INVEST",
+
+                    "I'm Exploring":
+                        "EXPLORE"
+
+                };
+
+
+                const newAction =
+                    unsureActions[selectedOption];
+
+
+                /*
+                   I'M EXPLORING
+                   Go directly to Area.
+                */
+
+                if (newAction === "EXPLORE") {
+
+                    selection.action =
+                        "EXPLORE";
+
+                    selection.property =
+                        "";
+
+                    selection.area =
+                        "";
+
+                    showStep(3);
+
                     return;
                 }
 
 
-                event.preventDefault();
+                /*
+                   BUY / SELL / INVEST
+                   Now show the appropriate
+                   property types.
+                */
+
+                if (newAction) {
+
+                    selection.action =
+                        newAction;
+
+                    selection.property =
+                        "";
+
+                    selection.area =
+                        "";
 
 
-                selection.property =
-                    propertyButton.dataset.property;
+                    setStepTwoTitle(
+                        newAction
+                    );
 
 
-                selection.area =
-                    "";
+                    buildPropertyOptions(
+                        newAction
+                    );
 
 
-                showStep(3);
+                    showStep(2);
+
+                    return;
+                }
 
             }
-        );
 
-    }
+
+            /*
+               NORMAL PROPERTY SELECTION
+               --------------------------------
+               BUY / SELL / RENT / INVEST /
+               PRIMARY
+            */
+
+            selection.property =
+                selectedOption;
+
+
+            selection.area =
+                "";
+
+
+            showStep(3);
+
+        }
+    );
+
+}
 
 
     /* =====================================================
