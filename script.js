@@ -1077,7 +1077,7 @@ if (aiLanguageButtons.length) {
     this.classList.add("active");
 
     const languagePrompts = {
-      id: "Hi! Sebelum kita mulai, boleh saya tahu nama Anda?",
+      id: "Hi! Sebelum kita mulai, boleh saya tahu nama Anda? ",
       en: "Hi! Before we start, what should I call you?",
       zh: "你好！在开始之前，我应该怎么称呼你？"
     };
