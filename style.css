@@ -2837,3 +2837,312 @@ h3 {
 #join-us {
     scroll-margin-top: 30px;
 }
+
+/* =========================================================
+   AI CONCIERGE — PROTOTYPE
+========================================================= */
+
+.ai-concierge {
+
+    max-width: 820px;
+
+    padding: 55px 0 20px;
+}
+
+
+.ai-concierge h2 {
+
+    margin-bottom: 22px;
+}
+
+
+.ai-intro {
+
+    max-width: 680px;
+
+    color: var(--text-soft);
+
+    font-size: 16px;
+
+    line-height: 1.75;
+
+    margin-bottom: 10px;
+}
+
+
+.ai-intro strong {
+
+    color: var(--text);
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   LANGUAGE
+========================================================= */
+
+.ai-language {
+
+    margin-top: 42px;
+}
+
+
+.ai-question {
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    margin-bottom: 18px;
+}
+
+
+.ai-language-options {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+.ai-language-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-height: 52px;
+
+    padding: 0 20px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50px;
+
+    background: var(--white);
+
+    color: var(--text);
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.ai-language-button:hover {
+
+    transform: translateY(-2px);
+
+    border-color: #b9d7eb;
+
+    box-shadow: var(--shadow);
+}
+
+
+.ai-language-flag {
+
+    font-size: 18px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   CHAT PREVIEW
+========================================================= */
+
+.ai-chat-preview {
+
+    display: none;
+
+    margin-top: 42px;
+
+    max-width: 680px;
+}
+
+
+.ai-chat-preview.active {
+
+    display: block;
+
+    animation:
+        finderFade 0.4s ease;
+}
+
+
+.ai-message {
+
+    padding: 24px 26px;
+
+    border-radius: 18px 18px 18px 4px;
+
+    background: var(--blue-light);
+
+    border: 1px solid #d8eaf6;
+}
+
+
+.ai-message-label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--blue);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+}
+
+
+.ai-message p {
+
+    color: var(--text);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+.ai-name-input {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 14px;
+}
+
+
+.ai-name-input input {
+
+    flex: 1;
+
+    min-width: 0;
+
+    height: 50px;
+
+    padding: 0 18px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50px;
+
+    background: var(--white);
+
+    color: var(--text);
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+
+.ai-name-input input:focus {
+
+    border-color: #9fc9e5;
+
+    box-shadow:
+        0 0 0 3px rgba(
+            23,
+            105,
+            170,
+            0.08
+        );
+}
+
+
+.ai-name-input .btn-primary {
+
+    border: 0;
+
+    cursor: pointer;
+
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   AI CONCIERGE — MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .ai-concierge {
+
+        padding: 35px 0 10px;
+    }
+
+
+    .ai-intro {
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    .ai-language {
+
+        margin-top: 32px;
+    }
+
+
+    .ai-language-options {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .ai-language-button {
+
+        width: 100%;
+
+        justify-content: flex-start;
+
+        min-height: 54px;
+    }
+
+
+    .ai-chat-preview {
+
+        margin-top: 32px;
+    }
+
+
+    .ai-name-input {
+
+        flex-direction: column;
+    }
+
+
+    .ai-name-input input,
+    .ai-name-input .btn-primary {
+
+        width: 100%;
+    }
+
+}
