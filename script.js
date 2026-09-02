@@ -133,7 +133,13 @@ aiLanguageButtons.forEach(
                 this.classList.add(
                     "active"
                 );
-
+               if (aiChatPreview) {
+               
+                   aiChatPreview.classList.add(
+                       "active"
+                   );
+               
+               }
             }
         );
 
