@@ -3218,3 +3218,25 @@ h3 {
 
     cursor: pointer;
 }
+
+/* AI GATE — PREMIUM CARD */
+
+#aiGate {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    padding: 56px 60px;
+    box-shadow: 0 14px 40px rgba(15, 35, 55, 0.06);
+}
+
+.ai-gate-actions .btn-secondary {
+    background: var(--white);
+    color: var(--dark);
+    border: 1px solid var(--border);
+}
+
+.ai-gate-actions .btn-secondary:hover {
+    background: var(--white);
+    color: var(--dark);
+    border-color: #b9d7eb;
+}
