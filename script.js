@@ -1092,6 +1092,8 @@ if (aiLanguageButtons.length) {
 
     if (aiChatPreview) {
       aiChatPreview.classList.add("active");
+      aiNameInput.parentElement.style.display = "none";
+      aiChatInput.style.display = "flex";
     }
   });
 });
