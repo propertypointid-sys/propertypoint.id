@@ -90,9 +90,12 @@ const aiSkipButton =
 
     const aiNameButton =
         document.getElementById("aiNameButton");
-
-    const aiChatPreview =
-        document.getElementById("aiChatPreview");
+   
+         const aiChatInput = document.getElementById("aiChatInput");
+         const aiUserMessage = document.getElementById("aiUserMessage");
+         const aiSendButton = document.getElementById("aiSendButton");
+         const aiChatPreview =
+             document.getElementById("aiChatPreview");
 
    const aiMessageText =
     document.getElementById("aiMessageText");
