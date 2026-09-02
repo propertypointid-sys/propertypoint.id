@@ -1092,8 +1092,7 @@ if (aiLanguageButtons.length) {
 
     if (aiChatPreview) {
       aiChatPreview.classList.add("active");
-      aiNameInput.parentElement.style.display = "none";
-      aiChatInput.style.display = "flex";
+      
     }
   });
 });
@@ -1133,7 +1132,7 @@ if (aiNameButton) {
                 );
                aiNameInput.parentElement.style.display = "none";
                aiChatInput.style.display = "flex";
-            }
+           }
 
 
             console.log(
