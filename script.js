@@ -67,7 +67,144 @@ const aiSkipButton =
     const finder =
         document.getElementById("finder");
 
+    /* =====================================================
+       AI CONCIERGE
+    ===================================================== */
 
+    const aiConcierge =
+        document.getElementById("aiConcierge");
+
+    const aiContextProperty =
+        document.getElementById("aiContextProperty");
+
+    const aiContextArea =
+        document.getElementById("aiContextArea");
+
+    const aiLanguageButtons =
+        document.querySelectorAll(
+            ".ai-language-button"
+        );
+
+    const aiNameInput =
+        document.getElementById("aiNameInput");
+
+    const aiNameButton =
+        document.getElementById("aiNameButton");
+
+    const aiChatPreview =
+        document.getElementById("aiChatPreview");
+
+   const aiMessageText =
+    document.getElementById("aiMessageText");
+
+   /* =====================================================
+   AI CONCIERGE — LANGUAGE & NAME
+===================================================== */
+
+let aiLanguage = "";
+
+let aiName = "";
+
+
+/* LANGUAGE SELECTION */
+
+aiLanguageButtons.forEach(
+    function (button) {
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                aiLanguage =
+                    this.dataset.language;
+
+
+                aiLanguageButtons.forEach(
+                    function (item) {
+
+                        item.classList.remove(
+                            "active"
+                        );
+
+                    }
+                );
+
+
+                this.classList.add(
+                    "active"
+                );
+
+            }
+        );
+
+    }
+);
+
+
+/* NAME — CONTINUE */
+
+if (aiNameButton) {
+
+    aiNameButton.addEventListener(
+        "click",
+        function (event) {
+
+            event.preventDefault();
+
+
+            if (!aiLanguage) {
+
+                alert(
+                    "Please choose your preferred language first."
+                );
+
+                return;
+
+            }
+
+
+            aiName =
+                aiNameInput.value.trim();
+
+
+            if (!aiName) {
+
+                alert(
+                    "Please enter your name first."
+                );
+
+                return;
+
+            }
+
+
+            const greetings = {
+
+                id:
+                    `Hi ${aiName}! Let's find the right property for you. What matters most to you?`,
+
+                en:
+                    `Hi ${aiName}! Let's find the right property for you. What matters most to you?`,
+
+                zh:
+                    `你好，${aiName}！让我们一起找到适合你的房产。对你来说，什么最重要？`
+
+            };
+
+
+            aiMessageText.textContent =
+                greetings[aiLanguage] ||
+                greetings.en;
+
+
+            aiChatPreview.classList.add(
+                "active"
+            );
+
+        }
+    );
+
+}
     /* =====================================================
        USER SELECTION
     ===================================================== */
