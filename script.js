@@ -187,8 +187,8 @@ if (aiNameButton) {
             const greetings = {
 
                 id:
-                    `Hi ${aiName}! Let's find the right property for you. What matters most to you?`,
-
+                   `Hi ${aiName}! Mari kita cari properti yang paling cocok untuk kamu. Apa yang paling penting buat kamu?`,
+               
                 en:
                     `Hi ${aiName}! Let's find the right property for you. What matters most to you?`,
 
