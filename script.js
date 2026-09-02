@@ -1016,14 +1016,83 @@ if (propertyOptions) {
    AI GATE — PROTOTYPE ACTIONS
 ===================================================== */
 
+/* =====================================================
+   AI GATE — OPEN CONCIERGE
+===================================================== */
+
 if (aiYesButton) {
 
     aiYesButton.addEventListener(
         "click",
         function () {
 
-            alert(
-                "AI Concierge will be connected in the next step."
+            if (aiGate) {
+                aiGate.classList.add("ai-started");
+            }
+
+            if (aiConcierge) {
+                aiConcierge.classList.add("active");
+            }
+
+            if (aiContextProperty) {
+                aiContextProperty.textContent =
+                    selection.property || "House";
+            }
+
+            if (aiContextArea) {
+                aiContextArea.textContent =
+                    selection.area || "PIK";
+            }
+
+            if (aiChatPreview) {
+                aiChatPreview.classList.remove("active");
+            }
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   AI LANGUAGE SELECTION
+===================================================== */
+
+if (aiLanguageButtons.length) {
+
+    aiLanguageButtons.forEach(
+        function (button) {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    aiLanguageButtons.forEach(
+                        function (item) {
+
+                            item.classList.remove(
+                                "selected"
+                            );
+
+                        }
+                    );
+
+
+                    this.classList.add(
+                        "selected"
+                    );
+
+
+                    const language =
+                        this.dataset.language;
+
+
+                    console.log(
+                        "AI Language:",
+                        language
+                    );
+
+                }
             );
 
         }
@@ -1032,13 +1101,46 @@ if (aiYesButton) {
 }
 
 
-if (aiSkipButton) {
+/* =====================================================
+   AI NAME
+===================================================== */
 
-    aiSkipButton.addEventListener(
+if (aiNameButton) {
+
+    aiNameButton.addEventListener(
         "click",
         function () {
 
-            showResult();
+            const name =
+                aiNameInput
+                    ? aiNameInput.value.trim()
+                    : "";
+
+
+            if (!name) {
+
+                if (aiNameInput) {
+                    aiNameInput.focus();
+                }
+
+                return;
+
+            }
+
+
+            if (aiChatPreview) {
+
+                aiChatPreview.classList.add(
+                    "active"
+                );
+
+            }
+
+
+            console.log(
+                "AI Client Name:",
+                name
+            );
 
         }
     );
