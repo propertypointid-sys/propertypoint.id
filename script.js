@@ -1092,7 +1092,8 @@ if (aiLanguageButtons.length) {
     }
   });
 });
-
+}
+   
 /* =====================================================
    AI NAME
 ===================================================== */
@@ -1298,4 +1299,4 @@ Thank you.`;
         "PropertyPoint.id — Property Finder loaded successfully."
     );
 
-
+});
