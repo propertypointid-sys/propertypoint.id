@@ -3222,13 +3222,13 @@ h3 {
 /* AI GATE — PREMIUM CARD */
 
 #aiGate {
-    width: min(100%, 1100px);
+    width: min(100%, 980px);
     margin: 0 auto;
     box-sizing: border-box;
     background: var(--white);
     border: 1px solid rgba(23, 105, 170, 0.10);
     border-radius: 28px;
-    padding: 48px 56px;
+    padding: 44px 48px;
     box-shadow: 0 18px 50px rgba(15, 35, 55, 0.08);
 }
 
