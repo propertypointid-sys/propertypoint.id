@@ -28,6 +28,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const finderResult =
         document.getElementById("finderResult");
 
+   const aiGate =
+    document.getElementById("aiGate");
+
+const aiYesButton =
+    document.getElementById("aiYesButton");
+
+const aiSkipButton =
+    document.getElementById("aiSkipButton");
+   
     const propertyOptions =
         document.getElementById("propertyOptions");
 
@@ -244,7 +253,9 @@ document.addEventListener("DOMContentLoaded", function () {
         if (stepThree) {
             stepThree.classList.remove("active");
         }
-
+      if (aiGate) {
+          aiGate.classList.remove("active");
+      }
         if (finderResult) {
             finderResult.classList.remove("active");
         }
@@ -277,6 +288,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
 
+       if (step === 5 && aiGate) {
+    aiGate.classList.add("active");
+}
 
         scrollToFinder();
 
@@ -842,13 +856,57 @@ if (propertyOptions) {
                     areaButton.dataset.area;
 
 
-                showResult();
+                if (
+    selection.action === "BUY" &&
+    selection.property === "House" &&
+    selection.area === "PIK"
+) {
+
+    showStep(5);
+
+} else {
+
+    showResult();
+
+}
 
             }
         );
 
     }
 
+   /* =====================================================
+   AI GATE — PROTOTYPE ACTIONS
+===================================================== */
+
+if (aiYesButton) {
+
+    aiYesButton.addEventListener(
+        "click",
+        function () {
+
+            alert(
+                "AI Concierge will be connected in the next step."
+            );
+
+        }
+    );
+
+}
+
+
+if (aiSkipButton) {
+
+    aiSkipButton.addEventListener(
+        "click",
+        function () {
+
+            showResult();
+
+        }
+    );
+
+}
 
     /* =====================================================
        BACK TO STEP 1
