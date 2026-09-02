@@ -1298,4 +1298,4 @@ Thank you.`;
         "PropertyPoint.id — Property Finder loaded successfully."
     );
 
-});
+
