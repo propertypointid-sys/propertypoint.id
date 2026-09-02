@@ -3146,3 +3146,75 @@ h3 {
     }
 
 }
+/* =========================================================
+   AI CONCIERGE — CHAT INPUT
+========================================================= */
+
+.ai-chat-input {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 14px;
+
+    margin-top: 20px;
+}
+
+
+.ai-chat-input textarea {
+
+    flex: 1;
+
+    min-width: 0;
+
+    height: 110px;
+
+    box-sizing: border-box;
+
+    padding: 16px 22px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 28px;
+
+    background: var(--white);
+
+    color: var(--text);
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    resize: vertical;
+
+    outline: none;
+}
+
+
+.ai-chat-input textarea:focus {
+
+    border-color: #b9d7eb;
+
+    box-shadow:
+        0 0 0 3px rgba(
+            23,
+            105,
+            170,
+            0.08
+        );
+}
+
+
+.ai-chat-input .btn-primary {
+
+    flex: 0 0 auto;
+
+    min-height: 48px;
+
+    border: 0;
+
+    cursor: pointer;
+}
