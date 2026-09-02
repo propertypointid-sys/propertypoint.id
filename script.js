@@ -1066,46 +1066,32 @@ if (aiYesButton) {
 
 if (aiLanguageButtons.length) {
 
-    aiLanguageButtons.forEach(
-        function (button) {
+    aiLanguageButtons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    aiLanguage = this.dataset.language;
 
-            button.addEventListener(
-                "click",
-                function () {
+    aiLanguageButtons.forEach(function(item) {
+      item.classList.remove("active");
+    });
 
-                    aiLanguageButtons.forEach(
-                        function (item) {
+    this.classList.add("active");
 
-                            item.classList.remove(
-                                "selected"
-                            );
+    const languagePrompts = {
+      id: "Hi! Sebelum kita mulai, boleh saya tahu nama Anda?",
+      en: "Hi! Before we start, what should I call you?",
+      zh: "你好！在开始之前，我应该怎么称呼你？"
+    };
 
-                        }
-                    );
+    if (aiMessageText) {
+      aiMessageText.textContent =
+        languagePrompts[aiLanguage] || languagePrompts.en;
+    }
 
-
-                    this.classList.add(
-                        "selected"
-                    );
-
-
-                    const language =
-                        this.dataset.language;
-
-
-                    console.log(
-                        "AI Language:",
-                        language
-                    );
-
-                }
-            );
-
-        }
-    );
-
-}
-
+    if (aiChatPreview) {
+      aiChatPreview.classList.add("active");
+    }
+  });
+});
 
 /* =====================================================
    AI NAME
