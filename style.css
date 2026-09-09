@@ -2837,3 +2837,1735 @@ h3 {
 #join-us {
     scroll-margin-top: 30px;
 }
+
+/* =========================================================
+   STAGE 2 — SEVIA BRIDGE
+========================================================= */
+
+.sevia-bridge {
+    display: none;
+    min-height: 520px;
+    padding: 70px 0;
+    animation: finderFade 0.5s ease;
+}
+
+.sevia-bridge.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sevia-bridge-card {
+    width: min(100%, 820px);
+    padding: 58px 62px 50px;
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    background:
+        radial-gradient(
+            circle at 85% 10%,
+            rgba(23, 105, 170, 0.08),
+            transparent 35%
+        ),
+        #ffffff;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.sevia-bridge-card h2 {
+    margin-bottom: 17px;
+}
+
+.sevia-bridge-description {
+    max-width: 620px;
+    margin: 0 auto;
+    color: var(--text-soft);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.sevia-language-block {
+    margin-top: 38px;
+}
+
+.sevia-language-label {
+    margin-bottom: 14px;
+    color: var(--text-soft);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.sevia-language-options {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.sevia-language-option {
+    min-height: 88px;
+    display: grid;
+    grid-template-columns: 34px 1fr 20px;
+    align-items: center;
+    gap: 9px;
+    padding: 14px 15px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--white);
+    color: var(--text);
+    text-align: left;
+    cursor: pointer;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.sevia-language-option:hover {
+    transform: translateY(-3px);
+    border-color: #b9d7eb;
+    box-shadow: 0 12px 28px rgba(23, 33, 43, 0.08);
+}
+
+.sevia-language-flag {
+    width: 28px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1px 5px rgba(0,0,0,.12);
+}
+
+/* CSS flags: reliable across Windows/browser emoji/font differences. */
+.sevia-flag-id {
+    background: linear-gradient(to bottom, #e91b2f 0 50%, #fff 50% 100%);
+}
+.sevia-flag-gb {
+    background:
+        linear-gradient(33deg, transparent 42%, #fff 42% 58%, transparent 58%),
+        linear-gradient(-33deg, transparent 42%, #fff 42% 58%, transparent 58%),
+        linear-gradient(33deg, transparent 46%, #d71920 46% 54%, transparent 54%),
+        linear-gradient(-33deg, transparent 46%, #d71920 46% 54%, transparent 54%),
+        linear-gradient(to right, transparent 38%, #fff 38% 62%, transparent 62%),
+        linear-gradient(to bottom, transparent 32%, #fff 32% 68%, transparent 68%),
+        linear-gradient(to right, transparent 43%, #d71920 43% 57%, transparent 57%),
+        linear-gradient(to bottom, transparent 39%, #d71920 39% 61%, transparent 61%),
+        #174a8b;
+}
+.sevia-flag-cn {
+    background: #de2910;
+}
+.sevia-flag-cn::before {
+    content: "★";
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    color: #ffde00;
+    font-size: 10px;
+    line-height: 1;
+}
+
+.sevia-language-option strong {
+    display: block;
+    font-size: 13px;
+    line-height: 1.3;
+}
+
+.sevia-language-option small {
+    display: block;
+    margin-top: 3px;
+    color: var(--text-soft);
+    font-size: 10px;
+    line-height: 1.3;
+}
+
+.sevia-language-arrow {
+    color: var(--blue);
+    font-size: 17px;
+    text-align: right;
+}
+
+.sevia-skip {
+    margin-top: 27px;
+    border: 0;
+    background: transparent;
+    color: var(--text-soft);
+    cursor: pointer;
+    font-size: 12px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.2s ease;
+}
+
+.sevia-skip:hover {
+    color: var(--blue);
+}
+
+
+
+/* =========================================================
+   SEVIA EXPERIENCE — CLEAN MASTER
+   One authoritative composition. No stacked V2/V3/V4/V5 patches.
+========================================================= */
+
+.sevia-experience {
+    display: none;
+    position: relative;
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+    background: #07121d;
+    color: #fff;
+}
+
+.sevia-experience.active {
+    display: block;
+}
+
+.sevia-experience .sevia-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1.015);
+}
+
+.sevia-experience .sevia-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(90deg, rgba(3,10,16,.78) 0%, rgba(3,10,16,.43) 42%, rgba(3,10,16,.18) 72%, rgba(3,10,16,.30) 100%);
+}
+
+.sevia-experience .sevia-topbar {
+    position: absolute;
+    top: 28px;
+    left: 48%;
+    right: 5%;
+    z-index: 30;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sevia-experience .sevia-nav-button {
+    min-height: 52px;
+    padding: 0 10px 0 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 0;
+    border-radius: 30px;
+    background: rgba(27,36,48,.90);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 26px rgba(0,0,0,.22);
+    backdrop-filter: blur(10px);
+}
+
+.sevia-experience #seviaBack > span:first-child {
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(24,42,58,.98);
+    border: 1px solid rgba(255,255,255,.28);
+    font-size: 21px;
+}
+
+.sevia-experience .sevia-home-button {
+    padding-left: 22px;
+    padding-right: 4px;
+}
+
+.sevia-experience .sevia-home-icon {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,.12);
+    font-size: 0;
+}
+
+.sevia-experience .sevia-home-icon::before {
+    content: "⌂";
+    font-size: 35px;
+    position: relative;
+    top: -4px;
+}
+
+.sevia-experience .sevia-layout {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.sevia-experience .sevia-brand-panel {
+    position: absolute;
+    left: 4.8%;
+    bottom: 7.5%;
+    z-index: 14;
+    width: 330px;
+    pointer-events: none;
+}
+
+.sevia-experience .sevia-brand-name {
+    font-size: clamp(53px, 5vw, 75px);
+    line-height: .92;
+    font-weight: 500;
+    letter-spacing: -.05em;
+    text-shadow: 0 8px 30px rgba(0,0,0,.35);
+    transform: translate(-4px, -8px);
+}
+
+.sevia-experience .sevia-brand-role,
+.sevia-experience .sevia-brand-propertypoint {
+    font-size: 11px;
+    letter-spacing: .18em;
+    font-weight: 600;
+}
+
+.sevia-experience .sevia-brand-divider {
+    width: 84px;
+    height: 1px;
+    margin: 25px 0 18px;
+    background: rgba(255,255,255,.55);
+}
+
+.sevia-experience .sevia-tagline {
+    max-width: 230px;
+    margin: 0;
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: rgba(255,255,255,.88);
+}
+
+.sevia-experience .sevia-character-panel {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 53%;
+    height: 94%;
+    z-index: 12;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    overflow: visible;
+    pointer-events: none;
+}
+
+.sevia-experience .sevia-character {
+    display: block;
+    width: 112%;
+    height: 100%;
+    max-width: none;
+    object-fit: contain;
+    object-position: right bottom;
+    transform: translateX(-3.5%);
+    filter: drop-shadow(0 24px 42px rgba(0,0,0,.30));
+    opacity: 1;
+    transition: opacity .85s ease-in;
+}
+
+.sevia-experience .sevia-character.is-fading {
+    opacity: 0;
+    transition: opacity 1.1s ease-in-out;
+}
+
+.sevia-experience .sevia-welcome-panel {
+    position: absolute;
+    top: 16%;
+    left: 46%;
+    right: 3.5%;
+    bottom: 10%;
+    z-index: 8;
+    padding: 48px 44px 38px;
+    border: 1px solid rgba(255,255,255,.22);
+    border-radius: 30px;
+    background: linear-gradient(145deg, rgba(18,29,40,.66), rgba(10,18,28,.54));
+    backdrop-filter: blur(18px);
+    box-shadow: 0 30px 80px rgba(0,0,0,.30), inset 0 1px 0 rgba(255,255,255,.08);
+    overflow: hidden;
+    padding-right: 4px;
+}
+
+.sevia-page {
+    display: none;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-gutter: stable;
+    padding-right: 4px;
+    animation: seviaPageIn .98s ease;
+}
+
+.sevia-page.active { display: block; }
+
+@keyframes seviaPageIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.sevia-experience .sevia-small-label {
+    margin-bottom: 15px;
+    color: rgba(255,255,255,.64);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .20em;
+}
+
+.sevia-experience .sevia-page h2 {
+    margin: 0 0 14px;
+    color: #fff;
+    font-size: clamp(38px, 4vw, 58px);
+    line-height: 1.02;
+    letter-spacing: -.045em;
+}
+
+.sevia-experience .sevia-page > p:not(.sevia-small-label) {
+    max-width: 720px;
+    margin: 0 0 13px;
+    color: rgba(255,255,255,.82);
+    font-size: 16px;
+    line-height: 1.48;
+}
+
+.sevia-name-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 26px;
+    max-width: 650px;
+}
+
+.sevia-name-row input,
+.sevia-shell-input input {
+    min-width: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #fff;
+    font: inherit;
+}
+
+.sevia-name-row input {
+    flex: 1;
+    min-height: 54px;
+    padding: 0 20px;
+    border: 1px solid rgba(255,255,255,.24);
+    border-radius: 28px;
+    background: rgba(4,11,18,.34);
+}
+
+.sevia-name-row input::placeholder,
+.sevia-shell-input input::placeholder { color: rgba(255,255,255,.42); }
+
+.sevia-next-button,
+.sevia-continue-hadi,
+.sevia-copy-summary {
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 28px;
+    background: rgba(255,255,255,.09);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .22s ease;
+}
+
+.sevia-next-button { padding: 0 22px; }
+.sevia-next-button:hover,
+.sevia-continue-hadi:hover,
+.sevia-copy-summary:hover { background: rgba(255,255,255,.16); transform: translateY(-1px); }
+
+.sevia-field-error { min-height: 18px; margin-top: 7px !important; color: #ffb7b7 !important; font-size: 12px !important; }
+
+.sevia-context-card {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-top: 23px;
+    padding: 15px 20px;
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 18px;
+    background: rgba(255,255,255,.045);
+}
+
+.sevia-context-label {
+    color: rgba(255,255,255,.52);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .16em;
+}
+
+#seviaContextText { color: rgba(255,255,255,.86); font-size: 13px; }
+
+.sevia-shell-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.sevia-shell-choice {
+    min-height: 64px;
+    border: 1px solid rgba(255,255,255,.22);
+    border-radius: 18px;
+    background: rgba(255,255,255,.035);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .22s ease;
+}
+
+.sevia-shell-choice:hover,
+.sevia-shell-choice.selected { background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.48); transform: translateY(-2px); }
+
+.sevia-handover-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.sevia-handover-choice {
+    min-height: 58px;
+    padding: 12px 22px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,.16);
+    background: rgba(255,255,255,.045);
+    color: rgba(255,255,255,.94);
+    font-size: 15px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all .25s ease;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.06),
+        0 8px 24px rgba(0,0,0,.10);
+}
+
+.sevia-handover-choice:hover {
+    background: rgba(255,255,255,.12);
+    border-color: rgba(255,255,255,.35);
+    transform: translateY(-2px);
+}
+
+.sevia-handover-choice.primary {
+    background: linear-gradient(
+        135deg,
+        rgba(27,109,255,.28),
+        rgba(14,165,233,.20)
+    );
+    border: 1px solid rgba(80,170,255,.38);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.08),
+        0 8px 28px rgba(20,120,220,.16);
+}
+
+.sevia-handover-choice.primary:hover {
+    filter: brightness(1.08);
+}
+
+.sevia-chat-area {
+    display: none;
+    margin-top: 17px;
+    animation: seviaPageIn .35s ease;
+}
+
+.sevia-chat-area.active { display: block; }
+
+.sevia-chat-status {
+    margin-bottom: 10px;
+    color: rgba(255,255,255,.70);
+    font-size: 12px;
+}
+
+.sevia-shell-input {
+    display: flex;
+    align-items: center;
+    min-height: 54px;
+    margin-top: 12px;
+    padding-left: 18px;
+    border: 1px solid rgba(255,255,255,.22);
+    border-radius: 30px;
+    background: rgba(4,11,18,.44);
+}
+
+.sevia-input-icon { color: rgba(255,255,255,.50); margin-right: 10px; }
+.sevia-shell-input input { flex: 1; font-size: 13px; }
+.sevia-input-send { flex: 0 0 40px; width: 40px; height: 40px; margin-right: 7px; border: 0; border-radius: 50%; background: rgba(107,166,205,.24); color: #fff; cursor: pointer; }
+
+.sevia-local-response {
+    display: none;
+    padding: 11px 14px;
+    border-left: 2px solid rgba(142,199,238,.72);
+    border-radius: 0 11px 11px 0;
+    background: rgba(255,255,255,.035);
+    color: rgba(255,255,255,.78);
+    font-size: 12px;
+    line-height: 1.5;
+}
+.sevia-local-response.active { display: block; }
+
+.sevia-shell-status { display: flex; align-items: center; gap: 7px; margin-top: 9px; color: rgba(255,255,255,.48); font-size: 10px; }
+.sevia-status-dot { width: 6px; height: 6px; border-radius: 50%; background: #8ec7ee; }
+
+.sevia-continue-hadi { display: none; margin-top: 14px; padding: 11px 17px; font-size: 12px; }
+.sevia-continue-hadi.active { display: inline-flex; }
+
+.sevia-summary-card {
+    display: block;
+    margin-top: 22px;
+    padding: 17px 20px;
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: 18px;
+    background: rgba(255,255,255,.045);
+    color: rgba(255,255,255,.82);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.sevia-summary-card .summary-row {
+    display: inline;
+}
+
+.sevia-summary-card .summary-label {
+    display: none;
+}
+
+.sevia-summary-card .summary-value {
+    font-weight: 600;
+}
+
+.sevia-summary-card .summary-row:nth-child(2)::before {
+    content: " ingin ";
+}
+
+.sevia-summary-card .summary-row:nth-child(4)::before {
+    content: " di ";
+}
+
+.sevia-summary-card .summary-row:nth-child(5)::before {
+    content: ", untuk ";
+}
+.sevia-summary-card .summary-label { color: rgba(255,255,255,.48); }
+.sevia-summary-card .summary-value { font-weight: 600; }
+
+.sevia-contact-options { display: grid; grid-template-columns: repeat(2, 1fr); gap: 13px; margin-top: 18px; }
+.sevia-contact-card { min-height: 76px; display: flex; align-items: center; gap: 13px; padding: 10px 14px; border: 1px solid rgba(255,255,255,.20); border-radius: 18px; background: rgba(255,255,255,.035); color: #fff; text-align: left; cursor: pointer; transition: .22s ease; }
+.sevia-contact-card:hover { background: rgba(255,255,255,.09); border-color: rgba(255,255,255,.40); transform: translateY(-2px); }
+.sevia-contact-icon { width: 42px; height: 42px; flex: 0 0 42px; display: inline-flex; align-items: center; justify-content: center; border-radius: 13px; background: rgba(255,255,255,.12); font-size: 20px; }
+.sevia-contact-copy { display: flex; flex-direction: column; min-width: 0; }
+.sevia-contact-copy strong { font-size: 14px; }
+.sevia-contact-copy small { margin-top: 2px; color: rgba(255,255,255,.54); font-size: 10px; line-height: 1.35; }
+.sevia-contact-arrow { margin-left: auto; color: rgba(255,255,255,.60); font-size: 18px; }
+
+.sevia-wechat-panel { display: none; align-items: center; gap: 18px; margin-top: 14px; padding: 14px; border: 1px solid rgba(255,255,255,.16); border-radius: 18px; background: rgba(255,255,255,.04); }
+.sevia-wechat-panel.active { display: flex; }
+.sevia-wechat-qr-wrap { flex: 0 0 118px; width: 118px; height: 118px; padding: 7px; border-radius: 12px; background: #fff; }
+.sevia-wechat-qr { width: 100%; height: 100%; object-fit: contain; }
+.sevia-wechat-copy { color: rgba(255,255,255,.78); font-size: 11px; line-height: 1.45; }
+.sevia-wechat-copy strong { color: #fff; font-size: 12px; }
+.sevia-wechat-copy p { margin: 5px 0 8px; }
+.sevia-copy-summary { padding: 7px 11px; font-size: 10px; }
+.sevia-copy-status { margin-left: 7px; color: rgba(255,255,255,.55); font-size: 10px; }
+.sevia-inline-back { margin-top: 12px; border: 0; background: transparent; color: rgba(255,255,255,.55); cursor: pointer; font-size: 11px; }
+
+@media (max-width: 900px) {
+    .sevia-experience { height: auto; min-height: 100svh; overflow: auto; }
+    .sevia-experience .sevia-topbar { top: 18px; left: 16px; right: 16px; }
+    .sevia-experience .sevia-layout { min-height: 100svh; height: auto; padding: 82px 16px 45px; }
+    .sevia-experience .sevia-brand-panel { position: relative; left: auto; bottom: auto; width: 100%; padding: 0 7px 18px; }
+    .sevia-experience .sevia-character-panel { position: relative; left: auto; bottom: auto; width: 100%; height: 48svh; min-height: 380px; justify-content: center; }
+    .sevia-experience .sevia-character { width: min(110vw, 650px); height: 100%; transform: none; }
+    .sevia-experience .sevia-welcome-panel { position: relative; top: auto; left: auto; right: auto; bottom: auto; width: 100%; min-height: 0; margin: 0; padding: 34px 23px 30px; }
+    .sevia-contact-options { grid-template-columns: 1fr; }
+    .sevia-name-row { flex-direction: column; }
+    .sevia-next-button { min-height: 50px; }
+}
+
+@media (max-width: 600px) {
+    .sevia-experience .sevia-page h2 { font-size: 34px; }
+    .sevia-shell-actions { grid-template-columns: 1fr; }
+    .sevia-wechat-panel { align-items: flex-start; }
+}
+
+
+/* =========================================================
+   SEVIA — AUTHORITATIVE FINAL POLISH
+   Keep approved composition; repair flags, positioning and flow.
+========================================================= */
+
+/* Language bridge: keep the heading inside the card at every width. */
+.sevia-language-label {
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-align: center;
+}
+
+/* Reliable flags — no emoji dependency. */
+.sevia-language-flag {
+    width: 34px !important;
+    height: 23px !important;
+    position: relative !important;
+    display: inline-block !important;
+    flex: 0 0 34px !important;
+    overflow: hidden !important;
+    border-radius: 3px !important;
+    box-shadow: 0 1px 5px rgba(0,0,0,.14) !important;
+    font-size: 0 !important;
+    background: none !important;
+}
+
+.sevia-flag-id {
+    background: linear-gradient(to bottom, #e91b2f 0 50%, #fff 50% 100%) !important;
+}
+
+.sevia-flag-cn {
+    background: #de2910 !important;
+}
+.sevia-flag-cn::before {
+    content: "★" !important;
+    position: absolute !important;
+    left: 5px !important;
+    top: 2px !important;
+    color: #ffde00 !important;
+    font-size: 11px !important;
+    line-height: 1 !important;
+}
+
+/* Union Jack: layered CSS, independent of Windows emoji rendering. */
+.sevia-flag-gb {
+    background:
+        /* RED CENTER CROSS */
+        linear-gradient(90deg, transparent 45%, #c8102e 45% 55%, transparent 55%),
+        linear-gradient(0deg, transparent 43%, #c8102e 43% 57%, transparent 57%),
+
+        /* WHITE CROSS */
+        linear-gradient(90deg, transparent 39%, #fff 39% 61%, transparent 61%),
+        linear-gradient(0deg, transparent 39%, #fff 39% 61%, transparent 61%),
+
+        /* RED DIAGONAL */
+        linear-gradient(28deg, transparent 47%, #c8102e 47% 53%, transparent 53%),
+        linear-gradient(-28deg, transparent 47%, #c8102e 47% 53%, transparent 53%),
+
+        /* WHITE DIAGONAL */
+        linear-gradient(28deg, transparent 43%, #fff 43% 57%, transparent 57%),
+        linear-gradient(-28deg, transparent 43%, #fff 43% 57%, transparent 57%),
+
+        /* BLUE BASE */
+        #012169 !important;
+}
+
+.sevia-flag-gb::before,
+.sevia-flag-gb::after {
+    content: none !important;
+}
+
+/* The experience uses the same cinematic background on every page. */
+.sevia-experience .sevia-background {
+    background-color: #07121d;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Approved desktop composition. */
+@media (min-width: 901px) {
+    .sevia-experience .sevia-topbar {
+        top: 28px !important;
+        left: 46% !important;
+        right: 5% !important;
+    }
+
+    .sevia-experience .sevia-welcome-panel {
+        top: 16% !important;
+        bottom: 12% !important;
+        left: 46% !important;
+        right: 5% !important;
+        padding: 48px 44px 38px !important;
+        padding-right: 8px !important;
+    }
+
+    .sevia-experience .sevia-character-panel {
+        left: 1.5% !important;
+        width: 52.5% !important;
+    }
+
+    .sevia-experience .sevia-character {
+        width: 108% !important;
+        transform: translateX(-6%) !important;
+        object-position: right bottom !important;
+    }
+
+    
+    .sevia-experience .sevia-tagline {
+        font-style: italic !important;
+    }
+
+    .sevia-experience .sevia-name-row {
+        display: flex !important;
+        align-items: center !important;
+        width: 100% !important;
+        max-width: 650px !important;
+        min-height: 64px !important;
+        padding: 0 8px 0 20px !important;
+        box-sizing: border-box !important;
+        border: 1px solid rgba(255,255,255,.24) !important;
+        border-radius: 999px !important;
+        background: rgba(4,11,18,.34) !important;
+    }
+
+    .sevia-experience .sevia-name-row input {
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+        min-height: 62px !important;
+        padding: 0 10px 0 0 !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+    }
+
+    .sevia-experience .sevia-next-button {
+        position: relative !important;
+        width: 48px !important;
+        height: 48px !important;
+        min-width: 48px !important;
+        min-height: 48px !important;
+        flex: 0 0 48px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: 0 !important;
+        border-radius: 50% !important;
+        background: rgba(107,166,205,.25) !important;
+        color: transparent !important;
+        box-shadow: 0 7px 20px rgba(0,0,0,.20), 0 0 16px rgba(142,199,238,.10) !important;
+    }
+
+    .sevia-experience .sevia-next-button span { display: none !important; }
+    .sevia-experience .sevia-next-button::after {
+        content: "→" !important;
+        color: #fff !important;
+        font-size: 26px !important;
+        line-height: 1 !important;
+        font-weight: 800 !important;
+    }
+}
+
+/* Do not let the page scroll bleed outside the glass panel. */
+.sevia-page {
+    scrollbar-gutter: stable;
+}
+
+.sevia-page::-webkit-scrollbar { width: 8px; }
+.sevia-page::-webkit-scrollbar-track { background: transparent; }
+.sevia-page::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,.30);
+    border-radius: 999px;
+}
+
+/* Qualification chat: only show the final handover question after an answer. */
+.sevia-handover-question {
+    display: none;
+}
+.sevia-handover-question.active { display: block; }
+
+
+.sevia-experience .sevia-input-send::after {
+    content: "→" !important;
+    color: #fff !important;
+    font-size: 22px !important;
+    line-height: 1 !important;
+    font-weight: 800 !important;
+}
+
+@media (max-width: 900px) {
+    .sevia-experience .sevia-tagline { font-style: italic !important; }
+    .sevia-language-flag { width: 32px !important; height: 22px !important; flex-basis: 32px !important; }
+}
+
+/* SeVIA — acknowledgement after purpose selection */
+.sevia-experience .sevia-page h2.sevia-acknowledgement-title {
+    font-size: clamp(30px, 3vw, 42px) !important;
+    line-height: 1.10 !important;
+    letter-spacing: -.035em !important;
+}
+
+/* Hide SeVIA Back button */
+#seviaBack {
+    display: none !important;
+}
+
+/* SeVIA - Home button position */
+#seviaHome {
+    position: absolute !important;
+    top: 9% !important;
+    right: 2.4% !important;
+}
+
+#seviaPageSummary h2 {
+    font-size: clamp(34px, 3vw, 46px) !important;
+    line-height: 1.08 !important;
+}
+
+#seviaPageSummary .sevia-summary-card {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+}
+
+/* SeVIA input send button */
+.sevia-experience .sevia-input-send {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+    flex: 0 0 40px !important;
+    margin-right: 7px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 50% !important;
+    background: rgba(120,185,232,.22) !important;
+    color: #fff !important;
+    font-size: 20px !important;
+    line-height: 1 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+}
+
+/* FINAL FIX — SeVIA SEND BUTTON */
+.sevia-experience #seviaSend {
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    min-height: 42px !important;
+    flex: 0 0 42px !important;
+
+    padding: 0 !important;
+    margin-right: 7px !important;
+
+    border: 0 !important;
+    outline: 0 !important;
+    border-radius: 50% !important;
+
+    background: rgba(120,185,232,.22) !important;
+    color: transparent !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    appearance: none !important;
+    -webkit-appearance: none !important;
+}
+
+.sevia-experience #seviaSend::after {
+    content: "→" !important;
+    display: block !important;
+
+    color: #fff !important;
+    font-size: 22px !important;
+    line-height: 1 !important;
+    font-weight: 700 !important;
+    position: relative !important;
+    left: -6px !important;
+}
+
+/* =====================================================
+   EXPLORE INTRO — CINEMATIC ENTRANCE
+===================================================== */
+
+.sevia-experience .sevia-brand-name {
+    font-size: clamp(78px, 6vw, 104px) !important;
+    line-height: .92 !important;
+}
+
+/* Explore intro elements start hidden */
+.sevia-experience #seviaPageExploreIntro .seviaExploreFade {
+    opacity: 0;
+}
+
+.sevia-experience #seviaPageExploreIntro .seviaExploreNameRow {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sevia-experience #seviaPageExploreIntro .seviaExploreMessage1,
+.sevia-experience #seviaPageExploreIntro .seviaExploreMessage2 {
+    opacity: 0;
+}
+
+/* Slow, elegant fade */
+@keyframes seviaExploreFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sevia-experience #seviaPageExploreIntro .seviaExploreMessage1.is-visible {
+    animation: seviaExploreFadeIn 1.5s ease forwards;
+}
+
+.sevia-experience #seviaPageExploreIntro .seviaExploreNameRow.is-visible {
+    animation: seviaExploreFadeIn 1.2s ease forwards;
+    pointer-events: auto;
+}
+
+/* Explore intro text */
+.sevia-experience #seviaPageExploreIntro .sevia-explore-message {
+    color: #fff;
+    font-size: clamp(22px, 2vw, 30px);
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+/* Typing question */
+.sevia-experience #seviaPageExploreIntro .seviaExploreMessage2 {
+    white-space: nowrap;
+    overflow: hidden;
+    width: fit-content;
+    max-width: 100%;
+}
+
+/* =====================================================
+   EXPLORE INTRO — SEQUENCE
+===================================================== */
+
+/* Semua konten Explore disembunyikan saat awal */
+.sevia-experience #seviaPageExploreIntro .sevia-explore-message {
+    opacity: 0;
+}
+
+.sevia-experience #seviaPageExploreIntro .seviaExploreNameRow {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Perkenalan */
+.sevia-experience #seviaPageExploreIntro .seviaExploreMessage1.is-visible {
+    animation: seviaExploreFadeIn 1.8s ease forwards;
+}
+
+/* Pertanyaan */
+.sevia-experience #seviaPageExploreIntro .seviaExploreMessage2.is-visible {
+    opacity: 1;
+}
+
+/* Kotak nama */
+.sevia-experience #seviaPageExploreIntro .seviaExploreNameRow.is-visible {
+    animation: seviaExploreFadeIn 1.5s ease forwards;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Fade perlahan */
+@keyframes seviaExploreFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* EXPLORE INTRO — TYPOGRAPHY */
+
+.sevia-experience #seviaPageExploreIntro .sevia-explore-message {
+    color: #fff;
+    font-size: 28px;
+    line-height: 1.42;
+    margin-bottom: 24px;
+    max-width: 760px;
+}
+
+.sevia-experience #seviaPageExploreIntro #seviaExploreMessage1 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.sevia-experience #seviaPageExploreIntro #seviaExploreMessage1::first-line {
+    font-size: 44px;
+    font-weight: 700;
+}
+
+.sevia-experience #seviaPageExploreIntro #seviaExploreMessage2 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.sevia-experience #seviaPageExploreIntro .seviaExploreNameRow {
+    margin-top: 28px;
+}
+
+/* EXPLORE INTRO — TYPOGRAPHY */
+
+.sevia-experience #seviaPageExploreIntro .sevia-explore-message {
+    color: #fff;
+    max-width: 760px;
+}
+
+.sevia-experience #seviaPageExploreIntro .sevia-explore-greeting {
+    font-size: 44px;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.sevia-experience #seviaPageExploreIntro .sevia-explore-description {
+    font-size: 22px;
+    line-height: 1.42;
+    font-weight: 400;
+}
+
+.sevia-experience #seviaPageExploreIntro #seviaExploreMessage2 {
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 600;
+    margin-top: 34px;
+}
+
+.sevia-experience #seviaPageExploreIntro .seviaExploreNameRow {
+    margin-top: 28px;
+}
+
+/* EXPLORE INTRO — FINAL SEQUENCE */
+
+.sevia-experience .sevia-character.explore-hidden {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+.sevia-experience .sevia-character.explore-visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition:
+        opacity 1.4s ease-in-out !important;
+}
+
+.sevia-experience .sevia-welcome-panel.explore-hidden {
+    opacity: 0 !important;
+    transition: none !important;
+}
+
+.sevia-experience .sevia-welcome-panel.explore-visible {
+    opacity: 1 !important;
+    transition: opacity 0.8s ease !important;
+}
+
+/* Explore text starts hidden */
+.sevia-experience #seviaPageExploreIntro .sevia-explore-message {
+    opacity: 0;
+}
+
+.sevia-experience #seviaPageExploreIntro .seviaExploreNameRow {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.sevia-experience #seviaPageExploreIntro .seviaExploreMessage1.is-visible {
+    opacity: 1;
+    animation: seviaExploreFadeIn 1.8s ease forwards;
+}
+
+.sevia-experience #seviaPageExploreIntro .seviaExploreMessage2.is-visible {
+    opacity: 1;
+}
+
+.sevia-experience #seviaPageExploreIntro .seviaExploreNameRow.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    animation: seviaExploreFadeIn 1.5s ease forwards;
+}
+
+@keyframes seviaExploreFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* EXPLORE INTRO — TEXT VISIBILITY */
+
+.sevia-experience #seviaPageExploreIntro #seviaExploreMessage1.is-visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    animation: seviaExploreTextIn 1.8s ease forwards !important;
+}
+
+.sevia-experience #seviaPageExploreIntro #seviaExploreMessage2.is-visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+.sevia-experience #seviaPageExploreIntro .sevia-explore-greeting {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.sevia-experience #seviaPageExploreIntro .sevia-explore-description {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+@keyframes seviaExploreTextIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =====================================================
+   SEVIA EXPLORE — PAGE 2 / DISCOVERY
+   ===================================================== */
+
+.sevia-explore-discovery {
+    display: none;
+}
+
+.sevia-explore-discovery {
+    display: none;
+    max-height: 100%;
+    overflow-y: auto;
+    padding-right: 14px;
+}
+
+.sevia-explore-discovery.active {
+    display: block;
+}
+
+
+/* -----------------------------------------------------
+   INTRO TEXT
+----------------------------------------------------- */
+
+.sevia-explore-discovery-intro {
+    margin-bottom: 24px;
+}
+
+.sevia-explore-discovery-greeting,
+.sevia-explore-discovery-question,
+.sevia-explore-discovery-note {
+    opacity: 1;
+    transform: translateY(8px);
+}
+
+.sevia-explore-discovery-greeting.is-visible {
+    animation: seviaExploreDiscoveryTextIn .7s ease forwards;
+}
+
+.sevia-explore-discovery-question.is-visible {
+    animation: seviaExploreDiscoveryTextIn .7s ease forwards;
+}
+
+.sevia-explore-discovery-note.is-visible {
+    animation: seviaExploreDiscoveryTextIn .7s ease forwards;
+}
+
+.sevia-explore-discovery-greeting {
+    margin-bottom: 12px;
+    color: #fff;
+    font-size: clamp(32px, 3.2vw, 48px);
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -.04em;
+}
+
+.sevia-explore-discovery-question {
+    margin-bottom: 7px;
+    color: rgba(255,255,255,.92);
+    font-size: clamp(23px, 2.1vw, 31px);
+    line-height: 1.25;
+    font-weight: 600;
+}
+
+.sevia-explore-discovery-note {
+    color: rgba(255,255,255,.55);
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+
+/* -----------------------------------------------------
+   CHOICE CARDS
+----------------------------------------------------- */
+
+.sevia-explore-choice-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 24px;
+    padding-right: 8px;
+}
+
+
+/* Cards start hidden */
+
+.sevia-explore-choice {
+    position: relative;
+
+    min-height: 64px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 14px 18px;
+
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: 17px;
+
+    background: rgba(255,255,255,.035);
+
+    color: #fff;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    opacity: 0;
+    transform: translateY(10px);
+
+    transition:
+        background .22s ease,
+        border-color .22s ease,
+        transform .22s ease,
+        box-shadow .22s ease;
+}
+
+
+/* Staggered entrance */
+
+.sevia-explore-choice.is-visible {
+    animation: seviaExploreChoiceIn .55s ease forwards;
+}
+
+
+/* Hover */
+
+.sevia-explore-choice:hover {
+    background: rgba(255,255,255,.08);
+    border-color: rgba(255,255,255,.34);
+    transform: translateY(-2px);
+}
+
+
+/* Selected */
+
+.sevia-explore-choice.selected {
+    background: rgba(142,199,238,.13);
+    border-color: rgba(142,199,238,.60);
+    box-shadow:
+        0 8px 22px rgba(0,0,0,.12),
+        inset 0 1px 0 rgba(255,255,255,.06);
+}
+
+
+/* -----------------------------------------------------
+   CHECKBOX
+----------------------------------------------------- */
+
+.sevia-explore-choice::before {
+    content: "";
+
+    width: 21px;
+    height: 21px;
+
+    flex: 0 0 21px;
+
+    margin-right: 13px;
+
+    border: 1px solid rgba(255,255,255,.38);
+    border-radius: 6px;
+
+    background: rgba(255,255,255,.025);
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        transform .2s ease;
+}
+
+.sevia-explore-choice.selected::before {
+    background: rgba(142,199,238,.85);
+    border-color: rgba(142,199,238,.95);
+
+    transform: scale(1.04);
+}
+
+.sevia-explore-choice.selected::after {
+    content: "✓";
+
+    position: absolute;
+
+    left: 23px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #07121d;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+
+/* Text */
+
+.sevia-explore-choice-text {
+    font-size: 13px;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+
+/* Wide "Not Sure" card */
+
+.sevia-explore-choice-wide {
+    grid-column: span 2;
+}
+
+
+/* -----------------------------------------------------
+   AREA QUESTION
+----------------------------------------------------- */
+
+.sevia-explore-area-question {
+    margin-top: 27px;
+
+    color: rgba(255,255,255,.90);
+
+    font-size: 17px;
+    line-height: 1.45;
+    font-weight: 600;
+
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+.sevia-explore-area-question.is-visible {
+    animation: seviaExploreDiscoveryTextIn .7s ease forwards;
+}
+
+
+/* -----------------------------------------------------
+   AREA RESPONSE BOX
+----------------------------------------------------- */
+
+.sevia-explore-area-row {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    min-height: 58px;
+
+    margin-top: 14px;
+
+    padding: 0 8px 0 19px;
+
+    border: 1px solid rgba(255,255,255,.20);
+    border-radius: 999px;
+
+    background: rgba(4,11,18,.34);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(8px);
+}
+
+.sevia-explore-area-row.is-visible {
+    animation: seviaExploreDiscoveryTextIn .7s ease forwards;
+
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.sevia-explore-area-row input {
+    flex: 1;
+
+    min-width: 0;
+    min-height: 54px;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    color: #fff;
+
+    font: inherit;
+    font-size: 13px;
+}
+
+.sevia-explore-area-row input::placeholder {
+    color: rgba(255,255,255,.40);
+}
+
+
+/* Hide the old circular submit.
+   Continue below will be the main CTA. */
+
+#seviaExploreAreaSubmit {
+    display: none !important;
+}
+
+
+/* -----------------------------------------------------
+   CONTINUE — CAPSULE POP-UP
+----------------------------------------------------- */
+
+.sevia-explore-continue {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    width: 100%;
+    height: 48px;
+
+    margin-top: 17px;
+    padding: 0 24px;
+
+    border: 1px solid rgba(142,199,238,.42);
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(142,199,238,.22),
+            rgba(255,255,255,.08)
+        );
+
+    color: #fff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform:
+        translateY(8px)
+        scale(.92);
+
+    box-shadow:
+        0 10px 28px rgba(0,0,0,.18),
+        inset 0 1px 0 rgba(255,255,255,.08);
+
+    transition:
+        background .22s ease,
+        border-color .22s ease,
+        transform .22s ease,
+        box-shadow .22s ease;
+}
+
+.sevia-explore-continue.is-visible {
+    animation: seviaExploreContinuePop .55s cubic-bezier(.2,.85,.25,1.2) forwards;
+
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.sevia-explore-continue:hover {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(142,199,238,.30),
+            rgba(255,255,255,.12)
+        );
+
+    border-color: rgba(142,199,238,.62);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 13px 30px rgba(0,0,0,.22);
+}
+
+.sevia-explore-continue span:last-child {
+    font-size: 18px;
+    line-height: 1;
+}
+
+
+/* -----------------------------------------------------
+   ANIMATIONS
+----------------------------------------------------- */
+
+@keyframes seviaExploreDiscoveryTextIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes seviaExploreChoiceIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(.985);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes seviaExploreContinuePop {
+    0% {
+        opacity: 0;
+        transform:
+            translateY(10px)
+            scale(.78);
+    }
+
+    65% {
+        opacity: 1;
+        transform:
+            translateY(-1px)
+            scale(1.04);
+    }
+
+    100% {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* -----------------------------------------------------
+   MOBILE
+----------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    .sevia-explore-choice-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .sevia-explore-choice-wide {
+        grid-column: span 1;
+    }
+
+    .sevia-explore-choice {
+        min-height: 58px;
+    }
+
+    .sevia-explore-discovery-greeting {
+        font-size: 32px;
+    }
+
+    .sevia-explore-discovery-question {
+        font-size: 22px;
+    }
+
+    .sevia-explore-area-question {
+        font-size: 15px;
+    }
+}
+
+.sevia-explore-choice-icon {
+    display: none;
+}
+
+/* =====================================================
+   EXPLORE PAGE 1 — NAME BOX MUST START HIDDEN
+   ===================================================== */
+
+.sevia-experience #seviaPageExploreIntro .seviaExploreNameRow {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateY(10px);
+}
+
+.sevia-experience #seviaPageExploreIntro .seviaExploreNameRow.is-visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translateY(0);
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
+
+/* FIX — EXPLORE NAME RESPONSE BOX */
+.sevia-experience #seviaPageExploreIntro .seviaExploreNameRow.is-visible {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transition: opacity .7s ease !important;
+}
+
+/* =====================================================
+   EXPLORE PAGE 1 — NAME RESPONSE
+===================================================== */
+
+.sevia-experience #seviaPageExploreIntro .sevia-explore-name-row {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateY(10px);
+}
+
+.sevia-experience #seviaPageExploreIntro .sevia-explore-name-row.is-visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translateY(0);
+    animation: seviaExploreFadeIn 1.2s ease forwards;
+}

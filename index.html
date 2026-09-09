@@ -680,6 +680,660 @@
 
 
             <!-- =================================================
+                 STAGE 2 — SEVIA BRIDGE
+            ================================================== -->
+
+            <div
+                class="sevia-bridge"
+                id="seviaBridge"
+                aria-labelledby="seviaBridgeTitle">
+
+                <div class="sevia-bridge-card">
+
+                    <p class="eyebrow">
+                        PROPERTYPOINT.ID
+                    </p>
+
+                    <h2 id="seviaBridgeTitle">
+                        Want help narrowing it down?
+                    </h2>
+
+                    <p class="sevia-bridge-description">
+                        I can help you narrow down your options
+                        based on your needs, budget and preferences.
+                    </p>
+
+                    <div class="sevia-language-block">
+
+                        <p class="sevia-language-label">
+                            What language would you like us to use to communicate?
+                        </p>
+
+                        <div class="sevia-language-options">
+
+                            <button
+                                type="button"
+                                class="sevia-language-option"
+                                data-sevia-language="id">
+
+                                <span class="sevia-language-flag sevia-flag-id" aria-hidden="true">🇮🇩</span>
+
+                                <span>
+                                    <strong>Bahasa Indonesia</strong>
+                                    <small>Continue in Indonesian</small>
+                                </span>
+
+                                <span class="sevia-language-arrow">→</span>
+
+                            </button>
+
+                            <button
+                                type="button"
+                                class="sevia-language-option"
+                                data-sevia-language="en">
+
+                                <span class="sevia-language-flag sevia-flag-gb" aria-hidden="true"></span>
+
+                                <span>
+                                    <strong>English</strong>
+                                    <small>Continue in English</small>
+                                </span>
+
+                                <span class="sevia-language-arrow">→</span>
+
+                            </button>
+
+                            <button
+                                type="button"
+                                class="sevia-language-option"
+                                data-sevia-language="zh">
+
+                                <span class="sevia-language-flag sevia-flag-cn" aria-hidden="true">🇨🇳</span>
+
+                                <span>
+                                    <strong>中文</strong>
+                                    <small>继续使用中文</small>
+                                </span>
+
+                                <span class="sevia-language-arrow">→</span>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="sevia-skip"
+                        id="seviaSkip">
+
+                        Skip — continue to WhatsApp
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 SEVIA EXPERIENCE — PAGE 2 / 3 / 4
+            ================================================== -->
+
+            <section
+                class="sevia-experience"
+                id="seviaExperience"
+                aria-hidden="true">
+
+                <div class="sevia-background" id="seviaBackground"></div>
+                <div class="sevia-overlay"></div>
+
+                <div class="sevia-topbar">
+                    <button type="button" class="sevia-nav-button" id="seviaBack">
+                        <span>←</span><span>Back</span>
+                    </button>
+
+                    <button type="button" class="sevia-nav-button sevia-home-button" id="seviaHome">
+                        <span>Home</span><span class="sevia-home-icon">⌂</span>
+                    </button>
+                </div>
+
+                <div class="sevia-layout">
+
+                    <div class="sevia-brand-panel">
+                        <div class="sevia-brand-name">SeVIA</div>
+                        <div class="sevia-brand-role">AI PROPERTY CONCIERGE</div>
+                        <div class="sevia-brand-propertypoint">PROPERTYPOINT.ID</div>
+                        <div class="sevia-brand-divider"></div>
+                        <p class="sevia-tagline">Connecting People, Places, Opportunities &amp; Prosperity</p>
+                    </div>
+
+                    <div class="sevia-character-panel">
+                        <img
+                            id="seviaCharacter"
+                            class="sevia-character"
+                            src="assets/sevia/sevia-international.png"
+                            alt="SeVIA AI Property Concierge">
+                    </div>
+
+                    <div class="sevia-welcome-panel" id="seviaPanel">
+
+                        <!-- PAGE 2 — INTRO + NAME -->
+                        <div class="sevia-page active" id="seviaPageIntro">
+                            <p class="sevia-small-label" id="seviaLanguageLabel">ENGLISH</p>
+                            <h2 id="seviaIntroTitle">Hi, I'm SeVIA.</h2>
+                            <p id="seviaIntroText">PropertyPoint's AI Property Concierge, partnering with Hadi.</p>
+                            <p id="seviaIntroPrompt">Before we begin, may I know your name?</p>
+
+                            <div class="sevia-name-row">
+                                <input id="seviaNameInput" type="text" autocomplete="name" placeholder="Your name" aria-label="Your name">
+                                <button type="button" class="sevia-next-button" id="seviaNameContinue" aria-label="Continue"><span aria-hidden="true">→</span></button>
+                            </div>
+                           <p class="sevia-field-error" id="seviaNameError"></p>
+</div>
+
+
+                            <!-- EXPLORE — INTRO -->
+                            <div class="sevia-page" id="seviaPageExploreIntro">
+
+                                <p class="sevia-small-label" id="seviaExploreLabel">
+                                    ENGLISH
+                                </p>
+
+                                <div class="sevia-explore-message" id="seviaExploreMessage1">
+                                    <div class="sevia-explore-greeting">Halo, saya SeVIA.</div>
+                                    <div class="sevia-explore-description">Saya adalah AI Property Concierge dari PropertyPoint.id, partner Hadi, yang siap membantu Anda menjelajahi berbagai pilihan dan peluang properti.</div>
+                                </div>
+
+                                <div class="sevia-explore-message" id="seviaExploreMessage2">
+                                    Bolehkah saya mengetahui nama Anda?
+                                </div>
+
+                                <div class="sevia-name-row sevia-explore-name-row" id="seviaExploreNameRow">
+                                    <input
+                                        id="seviaExploreNameInput"
+                                        type="text"
+                                        autocomplete="name"
+                                        placeholder="Nama Anda"
+                                        aria-label="Nama Anda"
+                                    >
+
+                                    <button
+                                        type="button"
+                                        class="sevia-next-button"
+                                        id="seviaExploreNameContinue"
+                                        aria-label="Continue">
+                                        <span aria-hidden="true">→</span>
+                                    </button>
+                                </div>
+
+                                <p class="sevia-field-error" id="seviaExploreNameError"></p>
+
+</div>
+
+<!-- =================================================
+     EXPLORE — PAGE 2 / DISCOVERY
+================================================== -->
+
+<div class="sevia-explore-discovery" id="seviaPageExploreDiscovery">
+
+    <div class="sevia-explore-discovery-intro">
+
+        <div
+            class="sevia-explore-discovery-greeting"
+            id="seviaExploreDiscoveryGreeting">
+        </div>
+
+        <div
+            class="sevia-explore-discovery-question"
+            id="seviaExploreDiscoveryQuestion">
+        </div>
+
+        <div
+            class="sevia-explore-discovery-note"
+            id="seviaExploreDiscoveryNote">
+        </div>
+
+    </div>
+
+
+    <div
+        class="sevia-explore-choice-grid"
+        id="seviaExploreChoiceGrid">
+
+        <button type="button"
+                class="sevia-explore-choice"
+                data-explore-choice="residential">
+
+            <span class="sevia-explore-choice-icon">⌂</span>
+
+            <span class="sevia-explore-choice-text">
+                Residential Property
+            </span>
+
+        </button>
+
+
+        <button type="button"
+                class="sevia-explore-choice"
+                data-explore-choice="commercial">
+
+            <span class="sevia-explore-choice-icon">▥</span>
+
+            <span class="sevia-explore-choice-text">
+                Commercial Property
+            </span>
+
+        </button>
+
+
+        <button type="button"
+                class="sevia-explore-choice"
+                data-explore-choice="warehouse">
+
+            <span class="sevia-explore-choice-icon">▦</span>
+
+            <span class="sevia-explore-choice-text">
+                Warehouse
+            </span>
+
+        </button>
+
+
+        <button type="button"
+                class="sevia-explore-choice"
+                data-explore-choice="land">
+
+            <span class="sevia-explore-choice-icon">⌖</span>
+
+            <span class="sevia-explore-choice-text">
+                Land
+            </span>
+
+        </button>
+
+
+        <button type="button"
+                class="sevia-explore-choice"
+                data-explore-choice="investment">
+
+            <span class="sevia-explore-choice-icon">↗</span>
+
+            <span class="sevia-explore-choice-text">
+                Investment Opportunities
+            </span>
+
+        </button>
+
+
+        <button type="button"
+                class="sevia-explore-choice"
+                data-explore-choice="areas">
+
+            <span class="sevia-explore-choice-icon">◎</span>
+
+            <span class="sevia-explore-choice-text">
+                Areas &amp; Locations
+            </span>
+
+        </button>
+
+
+        <button type="button"
+                class="sevia-explore-choice sevia-explore-choice-wide"
+                data-explore-choice="unsure">
+
+            <span class="sevia-explore-choice-icon">?</span>
+
+            <span class="sevia-explore-choice-text">
+                I'm Not Sure Yet
+            </span>
+
+        </button>
+
+    </div>
+
+
+    <div
+        class="sevia-explore-area-question"
+        id="seviaExploreAreaQuestion">
+    </div>
+
+
+    <div
+        class="sevia-explore-area-row"
+        id="seviaExploreAreaRow">
+
+        <input
+            id="seviaExploreAreaInput"
+            type="text"
+            autocomplete="off"
+            placeholder="Example: PIK 2, Golf Island, West Jakarta..."
+            aria-label="Area or location">
+
+        <button
+            type="button"
+            id="seviaExploreAreaSubmit"
+            aria-label="Continue">
+
+            <span aria-hidden="true">→</span>
+
+        </button>
+
+    </div>
+
+
+    <button
+        type="button"
+        class="sevia-explore-continue"
+        id="seviaExploreContinue">
+
+        <span>Continue</span>
+        <span aria-hidden="true">→</span>
+
+    </button>
+
+</div>
+
+
+<!-- PAGE 3 — NARROWING + CHAT WITH SEVIA -->
+<div class="sevia-page" id="seviaPageChat">
+
+    <p class="sevia-small-label" id="seviaChatLabel">ENGLISH</p>
+
+    <h2 id="seviaChatTitle">
+        Nice to meet you.
+    </h2>
+
+    <p id="seviaChatPrompt">
+        Let's narrow this down a little...
+    </p>
+
+    <!-- CURRENT QUALIFICATION CONTEXT -->
+    <div class="sevia-context-card" id="seviaContextCard">
+        <span class="sevia-context-label">YOUR SEARCH</span>
+        <div class="sevia-context-content" id="seviaContextText"></div>
+    </div>
+
+    <!-- PURPOSE CHOICES -->
+    <div class="sevia-shell-actions" id="seviaPurposeChoices">
+        <button
+            type="button"
+            class="sevia-shell-choice"
+            data-purpose="self"
+        >
+            Self Use
+        </button>
+
+        <button
+            type="button"
+            class="sevia-shell-choice"
+            data-purpose="investment"
+        >
+            Investment
+        </button>
+
+        <button
+            type="button"
+            class="sevia-shell-choice"
+            data-purpose="both"
+        >
+            Both
+        </button>
+    </div>
+
+    <!-- CHAT AREA -->
+    <div
+        class="sevia-chat-area"
+        id="seviaChatArea"
+        aria-hidden="true"
+    >
+
+        <div
+            class="sevia-chat-status"
+            id="seviaChatStatus"
+        >
+            SeVIA is listening.
+        </div>
+
+        <div
+            class="sevia-local-response"
+            id="seviaLocalResponse"
+        ></div>
+
+        <div class="sevia-shell-input">
+
+            <span class="sevia-input-icon">↗</span>
+
+            <input
+                type="text"
+                id="seviaUserInput"
+                placeholder="Tell me what you have in mind..."
+                autocomplete="off"
+            >
+
+            <button
+                type="button"
+                id="seviaSend"
+                aria-label="Send"
+            >
+                →
+            </button>
+
+        </div>
+
+        <div class="sevia-shell-status">
+            SeVIA will use this conversation to better understand what you're looking for.
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- PAGE 3 — SEVIA SUMMARY -->
+<div class="sevia-page" id="seviaPageSummary">
+
+    <p class="sevia-small-label" id="seviaSummaryLabel">
+        ENGLISH
+    </p>
+
+    <h2 id="seviaSummaryTitle">
+        Here's what I understand.
+    </h2>
+
+    <p id="seviaSummaryIntro">
+        I've gathered the key points from our conversation.
+    </p>
+
+    <div
+        class="sevia-summary-card"
+        id="seviaSummaryCard"
+    ></div>
+
+    <p
+        class="sevia-handover-question"
+        id="seviaSummaryQuestion"
+    >
+        Would you like to ask SeVIA anything else?
+    </p>
+
+    <div class="sevia-contact-options">
+
+        <button
+            type="button"
+            class="sevia-contact-card"
+            id="seviaTalkToSevia"
+        >
+            <span class="sevia-contact-icon">
+                ✦
+            </span>
+
+            <span class="sevia-contact-copy">
+                <strong id="seviaTalkToSeviaTitle">
+                    Talk to SeVIA
+                </strong>
+
+                <small id="seviaTalkToSeviaText">
+                    Ask anything else before continuing.
+                </small>
+            </span>
+
+            <span class="sevia-contact-arrow">
+                →
+            </span>
+        </button>
+
+
+        <button
+            type="button"
+            class="sevia-contact-card"
+            id="seviaContinueToHadi"
+        >
+            <span class="sevia-contact-icon">
+                ◉
+            </span>
+
+            <span class="sevia-contact-copy">
+                <strong id="seviaContinueToHadiTitle">
+                    Contact Hadi
+                </strong>
+
+                <small id="seviaContinueToHadiText">
+                    Continue your conversation with Hadi.
+                </small>
+            </span>
+
+            <span class="sevia-contact-arrow">
+                →
+            </span>
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- PAGE 4 — HANDOVER -->
+
+                        <!-- PAGE 4 — HANDOVER -->
+<div class="sevia-page" id="seviaPageHandover">
+
+    <p class="sevia-small-label" id="seviaHandoverLabel">ENGLISH</p>
+
+    <h2 id="seviaHandoverTitle">Here's what I understand.</h2>
+
+    <p id="seviaHandoverText">
+        I have a clearer picture of what you're looking for.
+    </p>
+
+    <!-- USER SUMMARY -->
+    <div class="sevia-summary-card" id="seviaSummaryCard"></div>
+
+    <p class="sevia-handover-question" id="seviaHandoverQuestion">
+        What would you like to do next?
+    </p>
+
+    <div class="sevia-contact-options">
+
+        <!-- WHATSAPP -->
+        <a
+            class="sevia-contact-card"
+            id="seviaWhatsApp"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <span class="sevia-contact-icon whatsapp">
+                <img src="assets/icons/whatsapp.png" alt="WhatsApp">
+            </span>
+
+            <span class="sevia-contact-copy">
+                <strong>WhatsApp</strong>
+                <small id="seviaWhatsAppText">
+                    Connect with Hadi via WhatsApp
+                </small>
+            </span>
+
+            <span class="sevia-contact-arrow">→</span>
+        </a>
+
+        <!-- WECHAT -->
+        <button
+            type="button"
+            class="sevia-contact-card"
+            id="seviaWeChat"
+        >
+            <span class="sevia-contact-icon wechat">
+                <img src="assets/icons/wechat.webp" alt="WeChat">
+            </span>
+
+            <span class="sevia-contact-copy">
+                <strong>WeChat</strong>
+                <small id="seviaWeChatText">
+                    Connect with Hadi via WeChat
+                </small>
+            </span>
+
+            <span class="sevia-contact-arrow">→</span>
+        </button>
+
+    </div>
+
+    <!-- WECHAT QR PANEL — KEEP THIS -->
+    <div
+        class="sevia-wechat-panel"
+        id="seviaWeChatPanel"
+        aria-hidden="true"
+    >
+
+        <div class="sevia-wechat-qr-wrap">
+            <img
+                src="assets/sevia/wechat-qr.png"
+                alt="Hadi WeChat QR code"
+                class="sevia-wechat-qr"
+            >
+        </div>
+
+        <div class="sevia-wechat-copy">
+
+            <strong id="seviaWeChatInstruction">
+                Scan to continue with Hadi on WeChat.
+            </strong>
+
+            <p id="seviaWeChatSummaryNote">
+                Your summary is shown above.
+            </p>
+
+            <button
+                type="button"
+                class="sevia-copy-summary"
+                id="seviaCopySummary"
+            >
+                Copy summary
+            </button>
+
+            <span
+                class="sevia-copy-status"
+                id="seviaCopyStatus"
+                aria-live="polite"
+            ></span>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- =================================================
                  RESULT
             ================================================== -->
 
@@ -1189,8 +1843,9 @@
 
 
             <a
-                href="#finder"
-                class="btn-primary">
+                href="#top"
+                class="btn-primary"
+                id="finalCtaHome">
 
                 Start Your Search
 
