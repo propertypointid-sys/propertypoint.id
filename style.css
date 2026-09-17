@@ -4031,20 +4031,20 @@ h3 {
 }
 
 .sevia-experience #seviaPageExploreIntro .sevia-explore-greeting {
-    font-size: 20px;
+    font-size: 44px;
     line-height: 1.1;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
 .sevia-experience #seviaPageExploreIntro .sevia-explore-description {
-    font-size: 10px;
+    font-size: 16px;
     line-height: 1.42;
     font-weight: 400;
 }
 
 .sevia-experience #seviaPageExploreIntro #seviaExploreMessage2 {
-    font-size: 12px;
+    font-size: 18px;
     line-height: 1.4;
     font-weight: 600;
     margin-top: 34px;
@@ -5794,4 +5794,29 @@ body.sevia-only-mode .sevia-experience .sevia-next-button::after {
         margin-right: 0 !important;
         transform: none !important;
     }
+}
+
+/* =========================================================
+   SEVIA EXPERIENCE — PAGE 1 DESKTOP TYPOGRAPHY
+   Only #seviaPageExploreIntro
+   Does not affect mobile or other SeVIA pages.
+   ========================================================= */
+
+@media (min-width: 901px) {
+
+    body.sevia-only-mode .sevia-experience #seviaPageExploreIntro .sevia-explore-greeting {
+        font-size: 32px !important;
+        line-height: 1.1 !important;
+    }
+
+    body.sevia-only-mode .sevia-experience #seviaPageExploreIntro .sevia-explore-description {
+        font-size: 16px !important;
+        line-height: 1.48 !important;
+    }
+
+    body.sevia-only-mode .sevia-experience #seviaPageExploreIntro #seviaExploreMessage2 {
+        font-size: 25px !important;
+        line-height: 1.2 !important;
+    }
+
 }
