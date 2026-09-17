@@ -1870,9 +1870,9 @@ h3 {
 
     .social-link img {
 
-        width: 36px;
+        width: 50px;
 
-        height: 36px;
+        height: 50px;
 
         object-fit: contain;
 
@@ -1939,29 +1939,60 @@ h3 {
 
     .final-cta {
 
-        padding: 80px 0;
+        padding: 15px 0 40px !important;
     }
 
     .final-cta h2 {
 
-        font-size: 34px;
+        font-size: 25px !important;
+    }
+
+    .final-cta p:not(.eyebrow) {
+    font-size: 11px !important;
+    margin-bottom: 20px !important;
+    }
+
+    .final-cta .btn-primary {
+        padding: 9px 20px !important;
+        min-height: 36px !important;
+        font-size: 10px !important;
     }
 
 
     /* Footer */
 
     .site-footer {
-
-        padding-top: 50px;
+    padding-top: 10px;
     }
 
     .footer-container {
 
         grid-template-columns: 1fr;
 
-        gap: 35px;
+        gap: 5px;
 
-        padding-bottom: 40px;
+        padding-bottom: 0;
+    }
+
+        .footer-logo {
+        font-size: 12px;
+        gap: 4px;
+        margin-bottom: 5px;
+    }
+
+    .footer-logo img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .footer-brand > p {
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+    .footer-focus {
+        margin-top: 6px;
+        font-size: 10px !important;
     }
 
     .footer-social {
@@ -1969,16 +2000,29 @@ h3 {
         grid-column: auto;
     }
 
+    .footer-social > p {
+    font-size: 10px;
+    margin-bottom: 5px;
+    }
+
+    .footer-links {
+    gap: 3px;
+    }
+
+    .footer-links a {
+        font-size: 7px;
+    }
+
     .footer-bottom {
 
         width:
-            calc(100% - 32px);
+            calc(100% - 22px);
 
         flex-direction: column;
 
-        gap: 7px;
+        gap: 0;
 
-        padding: 18px 0 22px;
+        padding: 8px 0 10px;
     }
 }
 
@@ -2138,36 +2182,24 @@ h3 {
     }
 
     .footer-social-icons a {
-        width: 40px !important;
-        height: 40px !important;
+        width: 30px !important;
+        height: 30px !important;
     }
 
     .footer-social-icons a img {
-        width: 22px !important;
-        height: 22px !important;
+        width: 16px !important;
+        height: 16px !important;
 
-        min-width: 22px !important;
-        min-height: 22px !important;
+        min-width: 16px !important;
+        min-height: 16px !important;
     }
 
     .footer-social-icons a.email-icon img {
-        width: 23px !important;
-        height: 23px !important;
+        width: 17px !important;
+        height: 17px !important;
     }
 }
 
-/* =========================================================
-   FINAL SOCIAL ICON SIZE — FORCE
-========================================================= */
-
-.social-links .social-link img {
-    width: 40px !important;
-    height: 40px !important;
-    max-width: none !important;
-    max-height: none !important;
-    object-fit: contain !important;
-    display: block !important;
-}
 
 /* =========================================================
    PROPERTY FINDER — OPTION ICONS
@@ -2762,9 +2794,11 @@ h3 {
         width:
             calc(100% - 32px);
 
-        grid-template-columns: 1fr;
+        grid-template-columns: 1.15fr 0.85fr;
 
-        gap: 32px;
+        gap: 20px;
+
+        align-items: center;
     }
 
 
@@ -2774,43 +2808,108 @@ h3 {
 
 
     .join-content h2 {
-        font-size: 32px;
+        font-size: 22px;
     }
 
 
     .join-content h3 {
-        font-size: 19px;
+        font-size: 12px;
     }
 
 
     .join-description {
-        font-size: 14px;
+        font-size: 10px;
+        width: 130%;
+        max-width: none;
     }
 
+    .join-description p {
+    margin: 0 0 2px !important;
+    }
+
+    .join-description p:last-child {
+    margin-bottom: 0 !important;
+    }
 
     .join-benefits {
         gap: 7px;
+        flex-wrap: nowrap;
+        align-items: center;
     }
 
 
     .join-button {
-        width: 100%;
+        width: 130%;
 
-        min-height: 48px;
+        min-height: 38px;
     }
 
 
     .join-image {
-        width: 100%;
+        width: 220%;
 
         max-width: none;
 
-        height: 260px;
+        height: 90px;
 
-        border-radius: 18px;
+        transform: translate(-75px, -80px);
+
+        border-radius: 15px;
     }
 
+    /* JOIN US — MOBILE FINAL SPACING */
+
+    .join-content .eyebrow {
+        margin-bottom: 8px !important;
+    }
+
+    .join-content h2 {
+        margin-bottom: 3px !important;
+    }
+
+    .join-content h3 {
+        margin-top: 0 !important;
+        margin-bottom: 8px !important;
+    }
+
+    .join-description {
+        margin-bottom: 0 !important;
+        line-height: 1.25 !important;
+    }
+    
+    .join-benefits {
+    display: flex !important;
+    width: max-content !important;
+    max-width: none !important;
+    gap: 6px !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
 }
+
+    .join-benefit {
+    font-size: 8px !important;
+    padding: 6px 10px !important;
+    width: max-content !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+}
+
+    .join-benefit span {
+    display: block !important;
+    width: max-content !important;
+    white-space: nowrap !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+}
+
+    .join-button {
+        margin-top: -12px !important;
+    }
+}
+
 
 
 /* =========================================================
@@ -3932,20 +4031,20 @@ h3 {
 }
 
 .sevia-experience #seviaPageExploreIntro .sevia-explore-greeting {
-    font-size: 44px;
+    font-size: 20px;
     line-height: 1.1;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
 .sevia-experience #seviaPageExploreIntro .sevia-explore-description {
-    font-size: 22px;
+    font-size: 10px;
     line-height: 1.42;
     font-weight: 400;
 }
 
 .sevia-experience #seviaPageExploreIntro #seviaExploreMessage2 {
-    font-size: 20px;
+    font-size: 12px;
     line-height: 1.4;
     font-weight: 600;
     margin-top: 34px;
@@ -4568,4 +4667,1036 @@ h3 {
     pointer-events: auto !important;
     transform: translateY(0);
     animation: seviaExploreFadeIn 1.2s ease forwards;
+}
+
+
+/* =========================================================
+   MOBILE HOME — FINAL COMPACT
+   PropertyPoint.id
+========================================================= */
+
+@media (max-width: 650px) {
+
+    /* ---------- HERO ---------- */
+
+    .hero-section {
+        min-height: 300px;
+        background-position: 64% center;
+}
+
+    .hero-container {
+        min-height: 300px;
+        width: calc(100% - 32px);
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        padding-top: 70px;
+        padding-bottom: 42px;
+    }
+
+    .hero-content .eyebrow {
+        font-size: 8px;
+        margin-bottom: 9px;
+    }
+
+    .hero-content h1 {
+        max-width: 230px;
+        font-size: 20px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
+    .hero-description {
+        max-width: 200px;
+        font-size: 9px;
+        line-height: 1.5;
+        margin-bottom: 14px;
+    }
+
+    .hero-cta {
+        padding: 10px 15px;
+        gap: 10px;
+        font-size: 9px;
+    }
+
+    .hero-cta span {
+        font-size: 14px;
+    }
+
+
+    /* ---------- PROPERTY FINDER ---------- */
+
+    .finder-section {
+        padding: 42px 0 48px;
+    }
+
+    .finder-container {
+        width: calc(100% - 32px);
+    }
+
+    .section-heading {
+        margin-bottom: 18px;
+    }
+
+    .section-heading .eyebrow {
+        font-size: 8px;
+        margin-bottom: 7px;
+    }
+
+    .section-heading h2 {
+        font-size: 22px;
+        line-height: 1.12;
+        margin-bottom: 7px;
+    }
+
+    .section-heading > p:not(.eyebrow) {
+        font-size: 9px;
+        line-height: 1.4;
+    }
+
+    .finder-options {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .image-option {
+        min-height: 0;
+        height: auto;
+    }
+
+    .option-image {
+        height: 78px;
+        min-height: 0;
+    }
+
+    .option-content {
+        padding: 8px 10px 9px;
+    }
+
+    .option-title {
+        font-size: 11px;
+        line-height: 1.15;
+        margin-bottom: 3px;
+    }
+
+    .option-description {
+        max-width: 82%;
+        font-size: 7.5px;
+        line-height: 1.3;
+    }
+
+    .option-arrow {
+        right: 7px;
+        bottom: 7px;
+        width: 21px;
+        height: 21px;
+        font-size: 11px;
+    }
+
+    /* Primary Projects / I'm Not Sure */
+
+    .option-wide {
+        grid-column: span 1;
+        display: block;
+        min-height: 0;
+    }
+
+    .option-wide .option-image {
+        height: 78px;
+        min-height: 0;
+    }
+
+    .option-wide .option-content {
+        padding: 8px 10px 9px;
+    }
+
+    .option-wide .option-title {
+        font-size: 11px;
+        line-height: 1.15;
+        margin-bottom: 3px;
+    }
+
+    .option-wide .option-description {
+        font-size: 7.5px;
+        line-height: 1.3;
+    }
+
+
+    /* ---------- WHY PROPERTYPOINT ---------- */
+
+    .why-section {
+        padding: 0 0 48px;
+    }
+
+    .why-container {
+        width: calc(100% - 32px);
+    }
+
+    .why-section .section-heading {
+        margin-bottom: 18px;
+    }
+
+    .why-section .section-heading .eyebrow {
+        font-size: 8px;
+        margin-bottom: 7px;
+    }
+
+    .why-section .section-heading h2 {
+        font-size: 20px;
+        line-height: 1.12;
+        margin-bottom: 8px;
+    }
+
+    .why-section .section-heading > p:not(.eyebrow) {
+        font-size: 9px;
+        line-height: 1.4;
+    }
+
+    .why-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .why-card {
+        min-height: 0;
+    }
+
+    .why-image {
+        height: 82px;
+        min-height: 0;
+    }
+
+    .why-content {
+        padding: 9px 10px 10px;
+    }
+
+    .why-number {
+        font-size: 7px;
+        margin-bottom: 5px;
+    }
+
+    .why-content h3 {
+        font-size: 11px;
+        line-height: 1.15;
+        margin-bottom: 4px;
+    }
+
+    .why-content p {
+        font-size: 7.5px;
+        line-height: 1.3;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+/* ---------- SOCIAL / FOLLOW ---------- */
+
+.social-section {
+    padding: 12px 0 14px !important;
+}
+
+.social-container .eyebrow {
+    font-size: 6px !important;
+    margin-bottom: 2px !important;
+}
+
+.social-container h2 {
+    font-size: 12px !important;
+    line-height: 1.15 !important;
+    margin-bottom: 2px !important;
+}
+
+.social-container > p:not(.eyebrow) {
+    font-size: 7px !important;
+    line-height: 1.3 !important;
+    max-width: 250px !important;
+    margin: 0 auto !important;
+}
+
+.social-links {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 1px !important;
+    margin-top: 7px !important;
+}
+
+.social-link {
+    flex: 0 0 20px !important;
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.social-link img {
+    width: 13px !important;
+    height: 13px !important;
+    object-fit: contain !important;
+}
+
+@media (max-width: 650px) {
+
+    .footer-social-icons a {
+    flex: 0 0 22px !important;
+    width: 22px !important;
+    height: 22px !important;
+    aspect-ratio: 1 / 1 !important;
+    }
+
+    .footer-social-icons a img {
+        width: 10px !important;
+        height: 10px !important;
+    }
+
+    .footer-bottom p {
+        font-size: 7px !important;
+    }
+
+}
+
+/* =========================================================
+   STEP 2 — MOBILE COMPACT CARDS
+========================================================= */
+
+@media (max-width: 650px) {
+
+    #stepTwo .finder-options {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    #stepTwo .option {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+        padding: 10px;
+        min-height: 88px;
+    }
+
+    #stepTwo .option-icon {
+        width: 42px;
+        height: 42px;
+        flex: 0 0 42px;
+    }
+
+    #stepTwo .option-icon img {
+        width: 42px !important;
+        height: 42px !important;
+        max-width: 42px !important;
+        max-height: 42px !important;
+    }
+
+    #stepTwo .option-content {
+        width: auto;
+        flex: 1;
+        min-width: 0;
+        padding: 0;
+        gap: 2px;
+    }
+
+    #stepTwo .option-title {
+        font-size: 13px;
+        line-height: 1.15;
+    }
+
+    #stepTwo .option-description {
+        font-size: 8px;
+        line-height: 1.3;
+        max-width: 90%;
+    }
+
+    #stepTwo .option-arrow {
+        position: absolute;
+        right: 6px;
+        bottom: 6px;
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+    }
+
+    #stepTwo {
+    padding-bottom: 5px;
+    }
+}
+
+/* STEP 3 — MOBILE OVERRIDE */
+@media (max-width: 650px) {
+
+    #stepThree .finder-options {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    #stepThree .option-image {
+        height: 70px;
+    }
+
+    #stepThree .option-content {
+        padding: 10px 12px 12px;
+    }
+
+    #stepThree .option-title {
+        font-size: 13px;
+    }
+
+    #stepThree .option-description {
+        font-size: 8px;
+    }
+
+}
+
+@media (max-width: 650px) {
+    .why-image {
+        height: 65px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    /* Halaman pilihan bahasa - mobile */
+    .sevia-language-block {
+        margin-top: 20px;
+    }
+
+    .sevia-language-label {
+        font-size: 8px;
+        line-height: 1.35;
+        margin-bottom: 7px;
+    }
+
+    .sevia-language-options {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    .sevia-language-option {
+    min-height: 62px;
+    grid-template-columns: 20px minmax(0, 1fr) 9px;
+    gap: 3px;
+    padding: 5px 4px;
+    border-radius: 10px;
+    }
+
+    .sevia-language-flag {
+        width: 20px !important;
+        height: 14px !important;
+    }
+
+    .sevia-language-option strong {
+        font-size: 7px;
+        line-height: 1.15;
+    }
+
+    .sevia-language-option small {
+        margin-top: 1px;
+        font-size: 6px;
+        line-height: 1.15;
+    }
+
+    .sevia-language-arrow {
+        font-size: 10px;
+    }
+}
+
+/* =========================================================
+   SEVIA LANGUAGE — MOBILE FINAL COMPACT
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .sevia-language-block {
+        margin-top: 10px !important;
+    }
+
+    .sevia-language-label {
+        font-size: 6px !important;
+        line-height: 1.0 !important;
+        margin-bottom: 5px !important;
+    }
+
+    .sevia-language-options {
+        gap: 5px !important;
+    }
+
+    .sevia-language-option {
+        min-height: 54px !important;
+        grid-template-columns: 18px minmax(0, 1fr) 7px !important;
+        gap: 2px !important;
+        padding: 4px 3px !important;
+        border-radius: 9px !important;
+    }
+
+    .sevia-language-flag {
+        width: 16px !important;
+        height: 10px !important;
+    }
+
+    .sevia-language-option strong {
+        font-size: 6px !important;
+        line-height: 1.0 !important;
+    }
+
+    .sevia-language-option small {
+        font-size: 5.5px !important;
+        line-height: 1.1 !important;
+        margin-top: 1px !important;
+    }
+
+    .sevia-language-arrow {
+        font-size: 8px !important;
+    }
+}
+
+@media (max-width: 650px) {
+    .sevia-bridge-card {
+        transform: translateY(-110px);
+    }
+}
+
+@media (max-width: 650px) {
+    .sevia-bridge-description {
+        font-size: 12px !important;
+        line-height: 1.3 !important;
+    }
+}
+
+@media (max-width: 650px) {
+    .sevia-bridge-card h2 {
+        font-size: 28px !important;
+        line-height: 1.08 !important;
+    }
+}
+
+@media (max-width: 650px) {
+    .sevia-language-block {
+        margin-top: 12px !important;
+    }
+
+    .sevia-language-label {
+        margin-bottom: 10px !important;
+    }
+}
+
+@media (max-width: 650px) {
+    .sevia-language-option {
+        min-height: 55px !important;
+        padding: 4px 3px !important;
+        gap: 2px !important;
+    }
+}
+
+/* =========================================================
+   STEP 4 — MOBILE SPACING ONLY
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .sevia-bridge {
+        min-height: -50px !important;
+        padding-bottom: -50px !important;
+    }
+
+}
+
+/* STEP 4 — MOBILE — PULL NEXT SECTION UP */
+@media (max-width: 650px) {
+    .sevia-bridge {
+        margin-bottom: -200px !important;
+    }
+}
+
+/* JOIN BUTTON — MOBILE — CENTER */
+@media (max-width: 650px) {
+    .join-button {
+        width: 120% !important;
+        margin-left: 3% !important;
+        margin-right: 0 !important;
+        transform: none !important;
+    }
+}
+
+/* =========================================================
+   SEVIA ONLY MODE
+   Only active when SeVIA Experience is opened.
+   Does not affect normal Home / Finder flow.
+========================================================= */
+
+body.sevia-only-mode .site-header,
+body.sevia-only-mode .hero-section {
+    display: none !important;
+}
+
+body.sevia-only-mode .finder-step,
+body.sevia-only-mode .sevia-bridge,
+body.sevia-only-mode .finder-result {
+    display: none !important;
+}
+
+body.sevia-only-mode .sevia-experience {
+    display: block !important;
+}
+
+body.sevia-only-mode .finder-section {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* =====================================================
+   SEVIA ONLY MODE — HIDE HOME CONTENT
+   ===================================================== */
+
+body.sevia-only-mode .why-section,
+body.sevia-only-mode .social-section,
+body.sevia-only-mode .join-section,
+body.sevia-only-mode .final-cta {
+    display: none !important;
+}
+
+/* =========================================================
+   SEVIA ONLY MODE — MOBILE FINAL
+   SeVIA page only. Does not affect Home / desktop.
+========================================================= */
+
+@media (max-width: 650px) {
+
+    body.sevia-only-mode .sevia-experience {
+        position: relative !important;
+        width: 100vw !important;
+        max-width: none !important;
+        min-width: 100vw !important;
+        margin-left: calc(50% - 50vw) !important;
+        margin-right: 0 !important;
+        min-height: 0 !important;
+        height: auto !important;
+        overflow: hidden !important;
+    }
+
+    body.sevia-only-mode .sevia-experience .sevia-layout {
+    width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 60px 0 0 !important;
+    }
+
+    /* CHARACTER */
+    body.sevia-only-mode .sevia-experience .sevia-character-panel {
+    width: 100% !important;
+    height: 39svh !important;
+    min-height: 245px !important;
+    margin: 0 !important;
+    justify-content: flex-start !important;
+    overflow: visible !important;
+    z-index: 12 !important;
+    }
+
+    body.sevia-only-mode .sevia-experience .sevia-character {
+    width: 54% !important;
+    max-width: none !important;
+    height: 108% !important;
+    transform: translate(10%, -190px) !important;
+    object-fit: contain !important;
+    object-position: left bottom !important;
+    position: relative !important;
+    z-index: 15 !important;
+}
+
+    /* WELCOME / GLASS PANEL */
+    body.sevia-only-mode .sevia-experience .sevia-welcome-panel {
+        transform: translateY(-190px) !important;
+        width: 100% !important;
+        min-height: 0 !important;
+        height: auto !important;
+        margin: 0 0 -150px !important;
+        padding: 17px 18px 17px !important;
+        box-sizing: border-box !important;
+        border-radius: 22px 22px 0 0 !important;
+    }
+
+    /* ALL TEXT */
+    body.sevia-only-mode .sevia-experience .sevia-small-label {
+        font-size: 7px !important;
+        margin-bottom: 7px !important;
+    }
+
+    body.sevia-only-mode .sevia-experience .sevia-page h2 {
+        font-size: 20px !important;
+        line-height: 1.08 !important;
+        margin: 0 0 7px !important;
+    }
+
+    body.sevia-only-mode .sevia-experience .sevia-page > p:not(.sevia-small-label) {
+        font-size: 8px !important;
+        line-height: 1.3 !important;
+        margin-bottom: 7px !important;
+    }
+
+    body.sevia-only-mode .sevia-experience .sevia-name-row {
+        margin-top: 11px !important;
+        gap: 8px !important;
+    }
+
+    body.sevia-only-mode .sevia-experience .sevia-name-row input {
+        min-height: 42px !important;
+        height: 42px !important;
+        font-size: 11px !important;
+        padding: 0 16px !important;
+    }
+
+    body.sevia-only-mode .sevia-experience .sevia-name-row {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 52px !important;
+    height: 52px !important;
+    padding: 0 7px 0 16px !important;
+    box-sizing: border-box !important;
+    gap: 8px !important;
+    margin-top: 12px !important;
+}
+
+body.sevia-only-mode .sevia-experience .sevia-name-row input {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    min-height: 48px !important;
+    height: 48px !important;
+    padding: 0 8px 0 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+}
+
+body.sevia-only-mode .sevia-experience .sevia-next-button {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+    flex: 0 0 40px !important;
+    padding: 0 8px 0 16px !important;
+    margin: 0 !important;
+    border-radius: 50% !important;
+    transform: translateX(8px) !important;
+}
+
+body.sevia-only-mode .sevia-experience .sevia-next-button span {
+    display: none !important;
+}
+
+    /* HOME */
+    body.sevia-only-mode #seviaHome {
+        top: 14px !important;
+        right: 12px !important;
+    }
+}
+
+/* =========================================================
+   SEVIA ONLY — MOBILE BRAND POSITION
+========================================================= */
+
+@media (max-width: 650px) {
+
+    body.sevia-only-mode .sevia-experience .sevia-brand-panel {
+        left: auto !important;
+        right: -135px !important;
+        bottom: auto !important;
+        top: 32px !important;
+        width: 230px !important;
+        max-width: 230px !important;
+        text-align: right !important;
+    }
+
+    body.sevia-only-mode .sevia-experience .sevia-brand-name {
+        font-size: 48px !important;
+        line-height: .9 !important;
+        text-align: right !important;
+        transform: none !important;
+    }
+
+    body.sevia-only-mode .sevia-experience .sevia-brand-role,
+    body.sevia-only-mode .sevia-experience .sevia-brand-propertypoint {
+        text-align: right !important;
+        font-size: 8px !important;
+        letter-spacing: .14em !important;
+    }
+
+    body.sevia-only-mode .sevia-experience .sevia-brand-divider {
+        margin: 14px 0 10px auto !important;
+        width: 55px !important;
+    }
+
+    body.sevia-only-mode .sevia-experience .sevia-tagline {
+        margin-left: auto !important;
+        text-align: right !important;
+        font-size: 9px !important;
+        line-height: 1.35 !important;
+        max-width: 150px !important;
+    }
+
+    /* Smaller Home */
+    body.sevia-only-mode .sevia-experience #seviaHome {
+        top: 8px !important;
+        right: 12px !important;
+        transform: scale(.88) !important;
+        transform-origin: top right !important;
+    }
+}
+
+body.sevia-only-mode .sevia-experience .sevia-next-button::after {
+    content: "→" !important;
+    display: block !important;
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    margin: 0 !important;
+    text-align: center !important;
+    color: #fff !important;
+    font-size: 20px !important;
+    line-height: 1 !important;
+    font-weight: 700 !important;
+}
+
+/* SEVIA PAGE 2 — MOBILE COMPACT PURPOSE CHOICES */
+
+@media (max-width: 650px) {
+
+    body.sevia-only-mode .sevia-experience .sevia-shell-actions {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 10px !important;
+        margin-top: 14px !important;
+    }
+
+    body.sevia-only-mode .sevia-experience .sevia-shell-choice {
+        min-height: 58px !important;
+        height: 58px !important;
+        padding: 8px 10px !important;
+        border-radius: 16px !important;
+        font-size: 11px !important;
+        line-height: 1.15 !important;
+    }
+
+    body.sevia-only-mode .sevia-experience .sevia-shell-choice:nth-child(3) {
+        grid-column: 1 / -1 !important;
+    }
+}
+@media (max-width: 650px) {
+
+    body.sevia-only-mode .sevia-experience #seviaPageExploreIntro .sevia-explore-greeting {
+        font-size: 20px !important;
+        line-height: 1.1 !important;
+        margin-bottom: 10px !important;
+    }
+
+    body.sevia-only-mode .sevia-experience #seviaPageExploreIntro #seviaExploreMessage1::first-line {
+        font-size: 20px !important;
+    }
+
+    body.sevia-only-mode .sevia-experience #seviaPageExploreIntro #seviaExploreMessage2 {
+        font-size: 15px !important;
+        line-height: 1.35 !important;
+        margin-top: 18px !important;
+    }
+
+}
+
+/* =========================================================
+   SEVIA EXPLORE PAGE 2 — MOBILE COMPACT
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    /* Judul "Hi ..., / Apa yang ingin..." */
+    body.sevia-only-mode .sevia-experience .sevia-explore-discovery-greeting {
+        font-size: 22px !important;
+        line-height: 1.1 !important;
+    }
+
+    body.sevia-only-mode .sevia-experience .sevia-explore-discovery-question {
+        font-size: 19px !important;
+        line-height: 1.2 !important;
+    }
+
+    body.sevia-only-mode .sevia-experience .sevia-explore-discovery-note {
+        font-size: 11px !important;
+        line-height: 1.3 !important;
+    }
+
+    /* PILIHAN — 2 kolom */
+    body.sevia-only-mode .sevia-experience .sevia-explore-choice-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 9px !important;
+    }
+
+    /* Kotak pilihan */
+    body.sevia-only-mode .sevia-experience .sevia-explore-choice {
+        min-height: 54px !important;
+        height: 54px !important;
+        padding: 8px 10px !important;
+        border-radius: 15px !important;
+        font-size: 11px !important;
+        line-height: 1.15 !important;
+    }
+
+    /* Pilihan terakhir — full width */
+    body.sevia-only-mode .sevia-experience .sevia-explore-choice:last-child {
+        grid-column: 1 / -1 !important;
+    }
+
+    /* Checkbox */
+    body.sevia-only-mode .sevia-experience .sevia-explore-choice input,
+    body.sevia-only-mode .sevia-experience .sevia-explore-choice .sevia-explore-checkbox {
+        width: 20px !important;
+        height: 20px !important;
+    }
+}
+
+/* =========================================================
+   SEVIA EXPLORE PAGE 3 — MOBILE COMPACT
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    /* Judul "Berikut yang saya pahami." */
+    body.sevia-only-mode #seviaPageSummary h2 {
+        font-size: 22px !important;
+        line-height: 1.08 !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* Isi ringkasan */
+    body.sevia-only-mode #seviaPageSummary .sevia-summary-card {
+        font-size: 12px !important;
+        line-height: 1.45 !important;
+        padding: 14px 17px !important;
+        margin-top: 14px !important;
+    }
+
+    /* Talk to SeVIA + Contact Hadi → 2 kolom */
+    body.sevia-only-mode #seviaPageSummary .sevia-contact-options {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 9px !important;
+        margin-top: 14px !important;
+    }
+
+    /* Card */
+    body.sevia-only-mode #seviaPageSummary .sevia-contact-card {
+        min-height: 64px !important;
+        height: 64px !important;
+        padding: 8px 9px !important;
+        gap: 8px !important;
+        border-radius: 15px !important;
+    }
+
+    /* Icon */
+    body.sevia-only-mode #seviaPageSummary .sevia-contact-icon {
+        width: 34px !important;
+        height: 34px !important;
+        flex: 0 0 34px !important;
+        border-radius: 10px !important;
+        font-size: 16px !important;
+    }
+
+    /* Tulisan card */
+    body.sevia-only-mode #seviaPageSummary .sevia-contact-copy strong {
+        font-size: 11px !important;
+        line-height: 1.15 !important;
+    }
+
+    body.sevia-only-mode #seviaPageSummary .sevia-contact-copy small {
+        font-size: 8px !important;
+        line-height: 1.2 !important;
+        margin-top: 2px !important;
+    }
+
+    /* Panah */
+    body.sevia-only-mode #seviaPageSummary .sevia-contact-arrow {
+        font-size: 14px !important;
+    }
+}
+
+/* =========================================================
+   SEVIA HANDOVER — MOBILE 2 COLUMNS
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    body.sevia-only-mode .sevia-contact-options {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 9px !important;
+    }
+
+    body.sevia-only-mode .sevia-contact-card {
+        min-height: 64px !important;
+        height: 64px !important;
+        padding: 8px 9px !important;
+        gap: 8px !important;
+        border-radius: 15px !important;
+    }
+
+    body.sevia-only-mode .sevia-contact-icon {
+        width: 34px !important;
+        height: 34px !important;
+        flex: 0 0 34px !important;
+        border-radius: 10px !important;
+        font-size: 16px !important;
+    }
+
+    body.sevia-only-mode .sevia-contact-copy strong {
+        font-size: 11px !important;
+        line-height: 1.15 !important;
+    }
+
+    body.sevia-only-mode .sevia-contact-copy small {
+        font-size: 8px !important;
+        line-height: 1.2 !important;
+    }
+
+    body.sevia-only-mode .sevia-contact-arrow {
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width: 650px) {
+    .footer-social-icons a img {
+        width: 21px !important;
+        height: 21px !important;
+        min-width: 21px !important;
+        min-height: 21px !important;
+    }
+}
+
+/* FOOTER SOCIAL ICONS — MOBILE ONLY */
+
+@media (max-width: 650px) {
+
+    .footer-social-icons a img {
+        width: 13px !important;
+        height: 13px !important;
+
+        min-width: 13px !important;
+        min-height: 13px !important;
+
+        max-width: 13px !important;
+        max-height: 13px !important;
+
+        object-fit: contain !important;
+    }
+
+    .footer-social-icons a.email-icon img {
+        width: 14px !important;
+        height: 14px !important;
+
+        min-width: 14px !important;
+        min-height: 14px !important;
+
+        max-width: 14px !important;
+        max-height: 14px !important;
+    }
+
 }

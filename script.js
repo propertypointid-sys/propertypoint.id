@@ -332,6 +332,7 @@ document.addEventListener("DOMContentLoaded", function () {
             seviaBridge.classList.add("active");
 
         }
+        
 
         if (step === 6 && seviaExperience) {
 
@@ -340,8 +341,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
 
+        const targetStep =
+            step === 1 ? stepOne :
+            step === 2 ? stepTwo :
+            step === 3 ? stepThree :
+            step === 4 ? finderResult :
+            step === 5 ? seviaBridge :
+            step === 6 ? seviaExperience :
+            null;
 
-        scrollToFinder();
+        if (targetStep) {
+            targetStep.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+
 
     }
 
@@ -1787,9 +1802,10 @@ if (exploreChoiceGrid) {
     } else {
          seviaSetPage("intro");
      }
-
+     
+        document.body.classList.add("sevia-only-mode");
         showStep(6);
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        
     }
 
     document.addEventListener("click", function(event) {
@@ -3109,11 +3125,15 @@ ${config.labels.additional}: ${additional}`;
 }
 
     if (seviaHome) {
-        seviaHome.addEventListener("click", function(event) {
+    seviaHome.addEventListener(
+        "click",
+        function (event) {
             event.preventDefault();
+            document.body.classList.remove("sevia-only-mode");
             goHome();
-        });
-    }
+        }
+    );
+}
 
     /* =====================================================
        STEP 3
@@ -3265,6 +3285,7 @@ ${config.labels.additional}: ${additional}`;
     ===================================================== */
 
     function goHome() {
+        document.body.classList.remove("sevia-only-mode");
         selection.action = "";
         selection.property = "";
         selection.area = "";
@@ -3416,3 +3437,4 @@ Thank you.`;
     );
 
 });
+
