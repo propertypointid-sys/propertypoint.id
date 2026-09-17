@@ -5213,10 +5213,12 @@ h3 {
 /* JOIN BUTTON — MOBILE — CENTER */
 @media (max-width: 650px) {
     .join-button {
-        width: 120% !important;
-        margin-left: 3% !important;
+        width: 100% !important;
+        margin-left: 0 !important;
         margin-right: 0 !important;
         transform: none !important;
+        justify-content: center !important;
+        text-align: center !important;
     }
 }
 
@@ -5697,6 +5699,72 @@ body.sevia-only-mode .sevia-experience .sevia-next-button::after {
 
         max-width: 14px !important;
         max-height: 14px !important;
+    }
+
+}
+
+/* =========================================================
+   JOIN US — MOBILE FINAL
+   Image between subtitle and description
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .join-section {
+        overflow: hidden !important;
+    }
+
+    .join-container {
+        width: calc(100% - 32px) !important;
+        display: block !important;
+        position: relative !important;
+    }
+
+    .join-content {
+        width: 100% !important;
+        max-width: none !important;
+    }
+
+    /* IMAGE — place visually below "Become a Property Specialist" */
+    .join-image {
+        position: absolute !important;
+        top: 77px !important;
+        left: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 75px !important;
+        margin: 0 !important;
+        transform: none !important;
+        border-radius: 14px !important;
+        z-index: 2 !important;
+        overflow: hidden !important;
+    }
+
+    .join-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-position: center 35% !important;
+    }
+
+    /* Make room for the image before description */
+    .join-description {
+        width: 100% !important;
+        max-width: none !important;
+        padding-top: 88px !important;
+    }
+
+    .join-benefits {
+        margin-top: 9px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .join-button {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        transform: none !important;
     }
 
 }
